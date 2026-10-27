@@ -125,6 +125,42 @@ https://raw.githubusercontent.com/sayeedbind/ledgerfilms-business-stories/main/P
 - Use only the browser. Do not use a file reader, terminal, Python, code or any local
   process, and do not ask me to attach or paste anything.
 
+STEP 1A: INSTALL AND LOAD THE TWO SKILLS
+Do this right after loading the playbook, before Step 2. This workflow runs on two
+skills — one is mine and lives in this repo, the other is an upstream skill you may
+need to install.
+
+1. **LedgerFilms Trend Research** (mine — nothing to install, it lives in this repo).
+   Open and read:
+   https://raw.githubusercontent.com/sayeedbind/ledgerfilms-business-stories/main/skills/ledgerfilms-trend-research/SKILL.md
+   and follow its links to its references when you use it. Use it three times:
+   (a) at the start, whenever my Topic is 'Trending', I gave no topic, or the Mode is
+   Full week — scan Google Trends, YouTube, Reddit and business news, score the
+   candidates and pick the hot topic; (b) as a light pass when I gave the topic
+   (timeliness + the phrases viewers are searching); (c) again at export, to build
+   the keyword & hashtag pack for YouTube long-form, YouTube Shorts, TikTok,
+   Instagram Reels, Facebook and X.
+
+2. **VideoExpress Scripting** (upstream — for prompt-pack craft and for diagnosing
+   failed or drifting generations). First read my repo's notes on it:
+   https://raw.githubusercontent.com/sayeedbind/ledgerfilms-business-stories/main/skills/videoexpress-scripting/README.md
+   and the SKILL-ADAPTATION.md file in the same folder.
+   - If the upstream skill (`ratava/videoexpress-scripting-skill`) is already
+     installed or available in your environment, use it while you write the prompt
+     pack (playbook Section 6) and whenever a generation fails.
+   - If it is not installed and your app supports installing skills/plugins, stop
+     before generating anything and show me the install steps, then wait for my
+     reply: Claude Desktop — Customize → Personal plugins → Add Marketplace →
+     `ratava/videoexpress-scripting-skill`, then install "VideoExpress Scripting".
+     ChatGPT — Settings → Plugins → Add a Marketplace → the same repo, then
+     install it. Wait for my 'installed', or my 'continue without it'.
+   - If your app can't install skills, or I say continue without it, do not block
+     production: use my repo's SKILL-ADAPTATION.md summary together with playbook
+     Section 6 and the multishot prompt-format reference instead.
+   - Licence warning: the upstream skill is CC BY-NC 4.0 (non-commercial). Before
+     relying on the upstream skill itself — not my repo's adaptation — for this
+     monetised channel, flag that to me once (see LICENSE-NOTICES.md in this repo).
+
 STEP 2: FOLLOW THE PLAYBOOK
 If my Topic is 'Trending' (or I gave no topic), run the playbook's Section 1A first:
 use the trend-research skill in this repo to scan Google Trends, YouTube, Reddit and
@@ -133,6 +169,7 @@ ranked slate with its evidence and your marked pick, then continue with the pick
 If I gave a topic, keep my topic and only run the skill's light pass (timeliness +
 the phrases viewers are searching). Either way, start at the playbook's Section 2
 after that and go: research and two-source fact-check, write, build the bible,
+write the prompt pack using the VideoExpress Scripting skill from Step 1A,
 generate, lock the narration, trim the dead air and export, without stopping to
 present each step. Come back to me only if:
 - I need to sign in (VideoExpress or GitHub), accept VideoExpress's one-time Terms

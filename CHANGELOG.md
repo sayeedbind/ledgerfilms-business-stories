@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.3 — 2026-10-27
+- SYSTEM_PROMPT: new **Step 1A — Install and load the two skills**, between loading
+  the playbook and following it. Trend-research skill: loaded from this repo (no
+  install) and used at start (Trending / no topic / Full week), as a light pass for
+  user topics, and at export for the keyword & hashtag pack. VideoExpress Scripting
+  skill: agent checks whether the upstream `ratava/videoexpress-scripting-skill` is
+  installed, gives the user the Claude Desktop / ChatGPT marketplace install steps
+  and waits if it isn't, falls back to this repo's `SKILL-ADAPTATION.md` + PLAYBOOK
+  §6 when installation isn't possible, and must flag the upstream skill's
+  CC BY-NC 4.0 licence before relying on it for the monetised channel. Step 2 now
+  names the scripting skill at prompt-pack stage. Synced to `SYSTEM-PROMPT.md`
+  (mirror) and the README copy-paste block; prompt version bumped to v1.3.
+
 ## v1.2 — 2026-10-27
 - **New skill: `skills/ledgerfilms-trend-research/`** — finds a real hot topic from
   live signals instead of model memory. Sources: Google Trends, YouTube (search,
