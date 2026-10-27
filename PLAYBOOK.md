@@ -1,4 +1,4 @@
-# PLAYBOOK — LedgerFilms Business & Money Stories (v1.0)
+# PLAYBOOK — LedgerFilms Business & Money Stories (v1.2)
 
 The full production instructions. `SYSTEM-PROMPT.md` loads this file. When this file and a
 user message disagree, the user wins. When this file and an upstream playbook disagree,
@@ -16,6 +16,34 @@ Ask once, together (see SYSTEM-PROMPT Step 0): **Mode, Topic, Angle, Sources.**
 Defaults if unanswered: Mode = what the topic implies (a company saga → long-form; a single
 surprising fact → Short), Angle = "the hidden mechanism that made / lost the money",
 Sources = research it yourself. Never ask a second round of intake questions — start.
+**Topic may be `Trending`** — that is a real instruction, not a missing answer: it hands
+topic selection to §1A.
+
+## 1A. Trend research — pick the topic from live signals (before §2)
+
+Run `skills/ledgerfilms-trend-research/` whenever Topic is `Trending` or blank, when
+the user asks what's hot / what to make next, and once before a Full-week slate is
+locked. The channel does not take topics from the model's memory when live signals
+can be checked.
+
+1. **Scan** Google Trends, YouTube (search + autocomplete), Reddit and at least one
+   news/calendar source, in the browser, and record every signal with its link, date,
+   timeframe and geography (US first, then UK/CA/AU).
+2. **Filter** to the channel pillars with a revealable money mechanism; apply the
+   skill's drop list (off-niche hype, rumours, advice bait, legally unbacked claims).
+3. **Score** survivors on the skill's 10-factor /50 rubric, fill
+   `templates/trend-brief.md`, mark one pick (★) and proceed with it. State each
+   candidate's publish-by window — a trend whose window can't fit the cadence is a
+   Short or a pass, never a rushed long-form.
+4. **User gave a topic instead:** run the skill's light pass only — timeliness and
+   the exact phrases viewers are searching — and keep the user's topic. Surface a
+   cold/saturated warning once, with evidence, and let the user decide.
+5. A trend signal is evidence of **interest, never of facts**. The winning topic goes
+   through §2 research and the two-source rule exactly like any other topic. If no
+   candidate clears the filter, say so and fall back to the topic bank's best
+   evergreen — never promote a weak trend to fill the slot.
+6. Save the brief's search phrases: they seed the keyword & hashtag pack that §10
+   must deliver at handoff (skill reference `keywords-and-hashtags.md`).
 
 ## 2. Research & fact-check (before a single word of script)
 
@@ -167,7 +195,10 @@ Per generation: `[REFERENCE USE] [IDENTITY / CONTINUITY] [SCENE] [ACTION] [CAMER
   then download/archive it the same day.
 - Hand the user, in one message: download link · 3 title options (pick marked) ·
   description (with sources + disclaimer) · tags · pinned comment · end-screen target ·
-  thumbnail brief (3 words max on the thumbnail, one cinematic frame, one emotion).
+  thumbnail brief (3 words max on the thumbnail, one cinematic frame, one emotion) ·
+  **the keyword & hashtag pack for every platform** (YouTube long-form, YouTube
+  Shorts, TikTok, Instagram Reels, Facebook, X) built by the trend-research skill
+  from the scan's real search phrases and filled into `templates/upload-metadata.md`.
 - Run `templates/qc-checklist.md` first. If a check fails, say which and fix it — don't
   ship silently.
 

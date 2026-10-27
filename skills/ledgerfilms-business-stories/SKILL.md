@@ -16,6 +16,7 @@ This skill is the router and the always-on rules.
 | Step | Read |
 |---|---|
 | Intake, formats, weekly cadence | `../../PLAYBOOK.md` §1, §4 · `../../workflows/` |
+| Topic = Trending, what's hot, keywords/hashtags | `../ledgerfilms-trend-research/SKILL.md` · `../../PLAYBOOK.md` §1A |
 | Research / any factual claim | `../../docs/fact-check-and-legal.md` · `references/fact-check-qc.md` |
 | Bible, masters, locations | `references/bible-and-continuity.md` |
 | Writing any prompt | `references/multishot-prompt-format.md` |

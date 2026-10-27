@@ -50,6 +50,8 @@ tease next week's topic. Full hour-by-hour plan: [`docs/weekly-schedule-15h.md`]
    ```
    Mode:    Long-form | Short | Full week (1 long + 4 Shorts)
    Topic:   e.g. "How Costco actually makes money — and why the hot dog is still $1.50"
+            — or "Trending": the agent picks a real hot topic from live signals
+            (Google Trends, YouTube, Reddit, news) using the trend-research skill
    Angle:   (optional) the one question the video must answer
    Sources: (optional) links / filings / articles to base facts on
    ```
@@ -99,7 +101,9 @@ Part B, for every assistant:
 "Reply with:
 1. Mode: Long-form | Short | Full week (1 long-form + 4 Shorts)
 2. Topic: the company, founder or money story (one or two sentences is plenty),
-   e.g. 'Why Blockbuster really died' or 'How Costco makes money'
+   e.g. 'Why Blockbuster really died' or 'How Costco makes money' — or write
+   'Trending' and I will pick a real hot topic from live signals (Google Trends,
+   YouTube, Reddit and business news) instead of suggesting one from memory
 3. (Optional) Angle: the one question the video must answer
 4. (Optional) Sources: links, filings or articles to base the facts on"
 If I already filled in Mode and Topic at the bottom of this message, Part B becomes:
@@ -122,9 +126,15 @@ https://raw.githubusercontent.com/sayeedbind/ledgerfilms-business-stories/main/P
   process, and do not ask me to attach or paste anything.
 
 STEP 2: FOLLOW THE PLAYBOOK
-You already have my mode and topic, so start at its Section 2 and go: research and
-two-source fact-check, write, build the bible, generate, lock the narration, trim the
-dead air and export, without stopping to present each step. Come back to me only if:
+If my Topic is 'Trending' (or I gave no topic), run the playbook's Section 1A first:
+use the trend-research skill in this repo to scan Google Trends, YouTube, Reddit and
+business news, score the candidates, and pick the winning hot topic — show me the
+ranked slate with its evidence and your marked pick, then continue with the pick.
+If I gave a topic, keep my topic and only run the skill's light pass (timeliness +
+the phrases viewers are searching). Either way, start at the playbook's Section 2
+after that and go: research and two-source fact-check, write, build the bible,
+generate, lock the narration, trim the dead air and export, without stopping to
+present each step. Come back to me only if:
 - I need to sign in (VideoExpress or GitHub), accept VideoExpress's one-time Terms
   screen, or top up credits / upgrade;
 - a key fact can't be verified from two sources (tell me the fact and what you found);
@@ -157,7 +167,10 @@ never duplicate a job. Then: Media Library → My AI Videos → add clips in sce
 Auto Align Clips → cut every frozen/silent head and tail → Auto Align Clips → Save →
 Export Video (High / FullHD / mp4 — 1920×1080 long-form, 1080×1920 Shorts) → verify the
 export exists in My Videos → send me the download link, 3 title options, a description
-with sources, tags, a pinned comment and a thumbnail brief.
+with sources, tags, a pinned comment, a thumbnail brief, and the keyword & hashtag
+pack for YouTube, TikTok, Instagram Reels, Facebook and X, built from the search
+phrases found in the trend research. If I asked for a trending topic and GitHub won't
+load, do not invent one from memory — ask me for a topic instead.
 
 (Optional: fill these in to skip the question)
 Mode:
@@ -187,8 +200,9 @@ Sources:
 | [`PROMPT_COMPACT.md`](PROMPT_COMPACT.md) | <8,000-character version for a Custom GPT / Claude Project |
 | [`workflows/`](workflows/) | Step-by-step: long-form, Shorts, and repurposing long → Shorts |
 | [`skills/ledgerfilms-business-stories/`](skills/ledgerfilms-business-stories/) | Agent Skill version (SKILL.md + references: UI map, pacing/trim, multishot format, bible, narration, QC) |
+| [`skills/ledgerfilms-trend-research/`](skills/ledgerfilms-trend-research/) | **Trend skill** — finds a real hot topic from live signals (Google Trends, YouTube, Reddit, news) at the start of a run, scores it, and builds the keyword & hashtag pack for every platform at upload |
 | [`skills/videoexpress-scripting/`](skills/videoexpress-scripting/) | How to install the upstream scripting skill + our adaptation notes + licence warning |
-| [`templates/`](templates/) | Intake, research brief, both script formats, storyboards, prompt pack, bible, thumbnail brief, upload metadata, QC checklist |
+| [`templates/`](templates/) | Intake, trend brief, research brief, both script formats, storyboards, prompt pack, bible, thumbnail brief, upload metadata, QC checklist |
 | [`examples/`](examples/) | Two complete worked examples (1 long-form, 1 Short) with prompts written out |
 | [`production/topic-bank.md`](production/topic-bank.md) | 30 scored topics: 10 long-form + 20 Short hooks |
 | [`production/week-01-calendar.md`](production/week-01-calendar.md) | A filled-in sample week |

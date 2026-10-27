@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.2 — 2026-10-27
+- **New skill: `skills/ledgerfilms-trend-research/`** — finds a real hot topic from
+  live signals instead of model memory. Sources: Google Trends, YouTube (search,
+  autocomplete, trending), Reddit, business news and earnings/event calendars, plus
+  supporting signals (TikTok/Reels search, X, Wikipedia pageviews). References cover
+  the source/signal method, a 10-factor /50 hot-topic scoring rubric with publish-by
+  windows, and a per-platform keyword & hashtag guide.
+- Wired into production start: PLAYBOOK §1A runs the skill when Topic is `Trending`
+  or blank, before a Full-week slate, or when the user asks what's hot; a user-given
+  topic gets the light pass only. `templates/trend-brief.md` added for the ranked
+  slate; intake and upload-metadata templates gained topic-source and keyword/hashtag
+  fields; PLAYBOOK §10 handoff now requires the keyword & hashtag pack for YouTube
+  long-form, YouTube Shorts, TikTok, Instagram Reels, Facebook and X.
+- SYSTEM_PROMPT bumped to v1.2 (mirrored in `SYSTEM-PROMPT.md` and the README
+  copy-paste block): Step 0 offers Topic = `Trending`, Step 2 runs §1A first.
+
 ## v1.1 — 2026-10-26
 - `SYSTEM_PROMPT.md` is now the canonical, paste-ready prompt (full text, modelled on the
   upstream `realistic-mini-dramas` SYSTEM_PROMPT layout), with `SYSTEM-PROMPT.md` kept as
