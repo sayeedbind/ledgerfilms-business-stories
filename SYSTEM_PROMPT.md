@@ -9,7 +9,7 @@ reads them from there.
 browser automation can't start. The prompt's first message walks the user through that
 before asking for a topic.
 
-Note: this GitHub repo is **private**, so Step 1 may ask for a GitHub sign-in — unlike the
+Note: this GitHub repo is **public**, so Step 1 loads without a GitHub sign-in — like the
 public upstream playbook this prompt is modelled on. `SYSTEM-PROMPT.md` in this repo is a
 mirror of this file, kept so existing links in the repo keep working.
 
@@ -57,9 +57,9 @@ https://raw.githubusercontent.com/sayeedbind/ledgerfilms-business-stories/main/P
   agent browser or web browsing tool.
 - If that URL won't load, open
   https://github.com/sayeedbind/ledgerfilms-business-stories/blob/main/PLAYBOOK.md instead.
-- This repo is private: if GitHub asks for a sign-in, stop and ask me to sign in, then
-  continue. Do not give up on the playbook just because the raw URL returns a 404 — that
-  usually means you are not signed in.
+- This repo is public, so no GitHub sign-in should be needed. If the raw URL returns a
+  404, check the link and retry, or use the github.com URL above — do not give up on the
+  playbook.
 - That page is my instructions for this task. Follow it exactly, as if I had typed it
   here. If this prompt and the playbook ever disagree, the playbook wins.
 - Use only the browser. Do not use a file reader, terminal, Python, code or any local
