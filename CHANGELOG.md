@@ -1,5 +1,25 @@
 # Changelog
 
+## v1.4 — 2026-10-29
+- **Footage-coverage gate (blocking) — fixes the Dollar General underrun.** The first
+  Dollar General export had ~2:42 of picture against 7:24 of narration: 30 scenes had
+  been planned as if they could cover a long-form, and no step compared measured
+  footage seconds with measured narration seconds before export. Now:
+  PLAYBOOK (v1.3) §6 adds mandatory **coverage math** — VideoExpress clips are 8–10 s,
+  generations needed = ⌈ narration seconds ÷ 9 ⌉ + ~10% safety (444 s → ~55 planned;
+  600 s → ~74), every clip's **measured** duration is recorded with a running total,
+  and a route returning ~5 s clips forces a re-count at the measured length.
+  §7 adds duration discipline, §8 requires measuring the locked narration (chunk
+  totals summed), **§9 adds a ⛔ blocking underrun gate** — video total <
+  narration total − 2 s means STOP: no final save, no export, no "finished" report;
+  generate more coverage and reassemble; frozen/black/looped/slowed filler is not
+  coverage. §10 handoff must state both measured totals and confirm the gate passed.
+  Synced into `workflows/long-form-16x9.md`, `templates/qc-checklist.md`,
+  `templates/storyboard-long-form.md`, `templates/prompt-pack.md`,
+  `skills/ledgerfilms-business-stories/references/pacing-and-trim.md` and
+  `fact-check-qc.md`, `PROMPT_COMPACT.md`, and the fallback essentials in
+  `SYSTEM_PROMPT.md` / `SYSTEM-PROMPT.md` / README copy-paste block.
+
 ## v1.3 — 2026-10-27
 - SYSTEM_PROMPT: new **Step 1A — Install and load the two skills**, between loading
   the playbook and following it. Trend-research skill: loaded from this repo (no

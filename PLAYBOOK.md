@@ -1,4 +1,4 @@
-# PLAYBOOK — LedgerFilms Business & Money Stories (v1.2)
+# PLAYBOOK — LedgerFilms Business & Money Stories (v1.3)
 
 The full production instructions. `SYSTEM-PROMPT.md` loads this file. When this file and a
 user message disagree, the user wins. When this file and an upstream playbook disagree,
@@ -144,6 +144,33 @@ Per generation: `[REFERENCE USE] [IDENTITY / CONTINUITY] [SCENE] [ACTION] [CAMER
 - Start each clip from a fresh start image at its closest framing by default; chain from a
   previous last frame only when framing matches (chaining compounds drift).
 
+### Coverage math — MANDATORY, before any generation (added v1.3)
+
+The blocking failure this prevents: picture that runs out before the narration does
+(2026-10-29: 30 short clips totalling ~2:42 against 7:24 of narration — an export that
+should never have been made). **Planned scene counts mean nothing; only measured
+seconds count.**
+
+1. **Estimate, then measure.** Before generation, estimate narration seconds from the
+   script (words ÷ ~150 wpm × 60 for planning). After narration is generated (§8),
+   replace the estimate with its **measured** duration — that number is the coverage
+   target, and it is final.
+2. **Clip length is 8–10 s.** VideoExpress clips for this channel are planned and
+   generated at 8–10 s each (set the duration / Manual Video Length where the route
+   offers it, and state the duration in the clip's [ACTION]). A route that silently
+   returns ~5 s clips (e.g. plain Text To Video with no length set) does **not**
+   satisfy a plan written for 8–10 s clips — re-plan the count at the measured length.
+3. **Scene count formula:** generations needed = ⌈ narration seconds ÷ 9 ⌉, plus a
+   ~10% safety margin of extra B-roll / motif generations. Worked examples:
+   7:24 of narration (444 s) → at least 50 generations, plan ~55;
+   ~10:00 (600 s) → at least 67 generations, plan ~74. A 30-scene plan can only ever
+   cover ~4:00–5:00 at these clip lengths — never promise it covers a long-form.
+4. **Running total while generating:** record every finished clip's **measured**
+   duration in the storyboard and keep a running footage total. Stop generating only
+   when the measured total ≥ the narration target. If it falls short, generate
+   additional on-topic B-roll / alternate-angle clips for the beats that are short —
+   never stretch, slow, freeze, loop or pad a clip to fake coverage.
+
 ## 7. Generation in VideoExpress
 
 1. **Route:** Long-form/Shorts are narration-led: build scenes as image → video, then the
@@ -161,13 +188,20 @@ Per generation: `[REFERENCE USE] [IDENTITY / CONTINUITY] [SCENE] [ACTION] [CAMER
    output — **max 3 attempts per clip**, changing one variable per retry. Keep usable clips
    despite minor gaze/camera differences; save deep QA for the final pass.
 6. Public gallery **off** on everything. No music in any clip.
+7. **Duration discipline:** generate every clip at 8–10 s (see §6 coverage math), and
+   record each finished clip's **measured** duration in the storyboard with a running
+   footage total. Assumed durations are not evidence — a clip counts only for the
+   seconds it actually runs.
 
 ## 8. Narration & sound
 
 - One narrator: the channel voice, same system voice + settings for every video
   (record them in the bible). Cloned voice only with the speaker's permission.
 - **Generate narration once and lock it.** Its real length sets the final runtime —
-  the video is cut to the voice, never the reverse.
+  the video is cut to the voice, never the reverse. **Measure its duration in seconds
+  as soon as it exists and write it into the storyboard/prompt pack** — it is the
+  coverage target for the §9 underrun gate. If narration is generated in chunks
+  (e.g. a per-chunk text cap), sum the chunk durations; the total is the target.
 - Presenter/dialogue audio (rare, only if the user asks for an intro) stays audible;
   all scene-clip audio is **muted under the narration**.
 - Music: none in generation; one licensed/library track added at assembly, low, ducked
@@ -184,7 +218,15 @@ Per generation: `[REFERENCE USE] [IDENTITY / CONTINUITY] [SCENE] [ACTION] [CAMER
 4. If footage overruns the narration's right edge: playhead at the audio edge, select the
    last video clip, Cut, delete only the excess right-hand chunk. Never stretch, speed or
    pad the audio to match the picture.
-5. Add number/graphic overlays from the research brief (clean text, double-checked against
+5. **⛔ BLOCKING underrun gate — check before saving as final and before any export:**
+   sum the measured durations on the video track and compare with the measured
+   narration duration. If video total < narration total − 2 s, **STOP. Do not save as
+   final, do not export, and do not report the video as finished.** Go back to §6/§7,
+   generate the missing coverage as additional clips for the short beats, reassemble,
+   and re-check. A frozen frame, a black tail, a looped clip or a slowed clip is not
+   coverage. (This gate exists because an under-covered export was shipped on
+   2026-10-29 — see §6 coverage math.)
+6. Add number/graphic overlays from the research brief (clean text, double-checked against
    sources). Save the project with the naming rule: `LF-YYYYMMDD-topic-slug` /
    `SH-YYYYMMDD-topic-slug`.
 
@@ -192,7 +234,10 @@ Per generation: `[REFERENCE USE] [IDENTITY / CONTINUITY] [SCENE] [ACTION] [CAMER
 
 - Long-form: **High / FullHD 1920×1080 / MP4**. Shorts: **High / FullHD 1080×1920 / MP4**.
 - Verify the export exists in My Videos (a submitted export is not a finished export),
-  then download/archive it the same day.
+  then download/archive it the same day. The handoff must state **both** measured
+  totals — total footage seconds and total narration seconds — and confirm the §9
+  underrun gate passed; an export whose duration was set by narration running past
+  the end of the picture is a failed export, not a finished video.
 - Hand the user, in one message: download link · 3 title options (pick marked) ·
   description (with sources + disclaimer) · tags · pinned comment · end-screen target ·
   thumbnail brief (3 words max on the thumbnail, one cinematic frame, one emotion) ·

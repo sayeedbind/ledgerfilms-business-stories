@@ -57,7 +57,9 @@ muted underneath. Music only at assembly, low, ducked.
 EDIT & EXPORT: timeline in scene order, verify each clip lands, Auto Align, then cut
 every frozen/silent head and tail and close gaps (Shorts: no shot outlives its line).
 Overrun: cut only the excess video at the narration's right edge — never speed or chop
-narration. Export High/FullHD MP4 — 1920×1080 long-form, 1080×1920 Shorts — and verify
+narration. UNDERRUN IS BLOCKING: clips are 8–10 s, planned as ⌈narration seconds ÷ 9⌉
++ ~10%; if the measured video total < measured narration total − 2 s, STOP —
+generate more clips and reassemble, never export under-covered. Export High/FullHD MP4 — 1920×1080 long-form, 1080×1920 Shorts — and verify
 the export exists.
 
 DELIVER in one message: download link, 3 titles (your pick marked), description with

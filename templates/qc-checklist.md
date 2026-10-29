@@ -8,7 +8,9 @@ Facts ☐ 2 sources/fact · ☐ years on figures · ☐ legal ladder · ☐ no a
 Picture ☐ identity consistent · ☐ era audit · ☐ locations/counts stable ·
 ☐ no rendered text/logos/numbers · ☐ style consistent
 Sound ☐ channel narrator, locked · ☐ scene audio under narration · ☐ no invented dialogue
-Edit ☐ order/no dupes · ☐ Auto Align · ☐ dead-air trim at 1× · ☐ runtime in range
+Edit ☐ order/no dupes · ☐ Auto Align · ☐ dead-air trim at 1× · ☐ runtime in range ·
+☐ **COVERAGE GATE: measured video total ___ s ≥ measured narration total ___ s − 2 s
+(no black/frozen/looped tail — if this fails, STOP, no export; PLAYBOOK §9)**
 Export ☐ verified in My Videos · ☐ FullHD, correct ratio · ☐ downloaded/archived
 Pack ☐ titles · ☐ description+sources+disclaimer · ☐ pinned comment · ☐ thumbnail brief
 

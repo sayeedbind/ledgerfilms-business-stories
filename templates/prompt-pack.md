@@ -2,6 +2,10 @@
 
 ## Overview
 - Format: 16:9 long-form / 9:16 Short · Target runtime: · Generation count: ·
+- **Coverage math (PLAYBOOK §6, mandatory):** estimated narration ___ s ·
+  clip length planned 8–10 s · generations needed = ⌈ narration s ÷ 9 ⌉ + ~10% = ___ ·
+  planned generations ___ · measured narration (after generation) ___ s ·
+  measured footage running total ___ s
 - Bible: `templates/character-and-company-bible.md` instance → (link/copy location)
 
 ## Global rules for this pack
