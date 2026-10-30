@@ -13,16 +13,20 @@ Rules live in `PLAYBOOK.md`; this is the checklist order of operations.
 4. **Bible** → `templates/character-and-company-bible.md`. Generate + approve the founder
    master image and one master per recurring location. Lock the narrator voice + settings.
 5. **Prompt pack** → `templates/prompt-pack.md` + storyboard (`templates/storyboard-long-form.md`).
-   **Coverage math first (PLAYBOOK §6):** generations = ⌈ estimated narration seconds ÷ 9 ⌉
-   + ~10% safety B-roll, at 8–10 s per clip (~67–74 generations for ~10 min; ~50–55 for
-   7½ min). A scene count that cannot cover the narration at 8–10 s per clip is a planning
-   error — fix the count here, not at export. Continuity handoff noted per clip
-   (incoming → action → outgoing → next opening). Reuse 15–20% of scenes as motifs/B-roll
-   to stay inside the week's hours.
+   **Coverage math first (PLAYBOOK §6):** split the script into **narration beats of
+   ≤10 s** (≈ ≤25 words, one idea per beat); each scene is generated at its beat's
+   length — scene count = beat count + ~10% safety B-roll (a 10-min script ≈ 60+ beats,
+   plan ~66; a 7½-min script ≈ 45+, plan ~50). Scene seconds then sum to the narration
+   total by construction. A scene plan whose beats cannot cover the narration is a
+   planning error — fix the count here, not at export. Continuity handoff noted per
+   clip (incoming → action → outgoing → next opening). Reuse 15–20% of scenes as
+   motifs/B-roll to stay inside the week's hours.
 6. **Generate** → image first, then video, in scene order, ≤ account's parallel slots.
    Settings checked in-dialog every time (ratio 16:9, enhance OFF, gallery OFF).
    Max 3 attempts per clip. Record each clip's **measured** duration; keep a running total.
-7. **Narrate** → one take of the locked script via the VideoExpress narration route.
+7. **Narrate** → the locked script via Import Media → Text to Speech (≤1,000-char
+   chunks, PLAYBOOK §8); measure each beat's audio and set any not-yet-generated clips
+   to their beat's measured length.
    Do not re-record for length; the recorded length is the runtime. **Measure it** —
    that total replaces the step-5 estimate as the coverage target.
 8. **Assemble** → timeline in order, verify each clip, Auto Align, dead-air trim pass,

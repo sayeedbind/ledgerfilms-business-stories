@@ -6,8 +6,9 @@ From the mini-dramas playbook (fast-cut discipline), slowed one notch for docume
 - Visual beat every **~3–5 s**; a generation (multi-shot clip) covers 8–12 s with 2–3
   internal hard-cut shots. ~60–75 generations per 10 minutes, with 15–20% motif/B-roll reuse.
 - **Measured coverage rules everything (PLAYBOOK §6/§9):** VideoExpress clips are
-  generated at 8–10 s each (up to the 10 s maximum the dialog supports — use it where
-  the beat allows); a route that returns ~5 s clips halves your coverage, so
+  generated at **its narration beat's measured length, max 10 s** — the scene follows
+  the voiceover (a 5 s line = a 5 s scene); a route that returns ~5 s clips regardless
+  of the plan halves your coverage, so
   re-count at the measured length. Generations needed = ⌈ narration seconds ÷ 9 ⌉
   + ~10%. Keep a running total of measured clip seconds while generating.
 - **Underrun is blocking:** if the assembled video track totals less than the

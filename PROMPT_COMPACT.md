@@ -63,9 +63,10 @@ video. Music only at assembly, low, ducked.
 EDIT & EXPORT: timeline in scene order, verify each clip lands, Auto Align, then cut
 every frozen/silent head and tail and close gaps (Shorts: no shot outlives its line).
 Overrun: cut only the excess video at the narration's right edge — never speed or chop
-narration. UNDERRUN IS BLOCKING: clips run 8–10 s (up to the 10 s maximum the dialog
-supports), planned as ⌈narration seconds ÷ 9⌉
-+ ~10%; if the measured video total < measured narration total − 2 s, STOP —
+narration. UNDERRUN IS BLOCKING: scenes follow the voiceover — split the script into
+≤10 s narration beats (≈ ≤25 words) and generate each clip at its beat's measured
+length (a 5 s line = a 5 s scene, max 10 s); scene count = beats + ~10% B-roll; if the
+measured video total < measured narration total − 2 s, STOP —
 generate more clips and reassemble, never export under-covered. Export High/FullHD MP4 — 1920×1080 long-form, 1080×1920 Shorts — and verify
 the export exists.
 

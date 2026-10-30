@@ -25,7 +25,8 @@ ALL boxes must pass — or the failure is disclosed to the user with the export.
 **Edit & export**
 - [ ] Clips in planned order, no duplicates, Auto Align done, dead-air trim passed at 1×
 - [ ] **COVERAGE GATE (blocking): measured video total ___ s ≥ measured narration
-      total ___ s − 2 s. Clips generated at 8–10 s; count planned as ⌈ narration s ÷ 9 ⌉
+      total ___ s − 2 s. Clips generated at their narration beat's measured length
+      (max 10 s); scene count = narration beats + ~10%
       + ~10%. If this fails: STOP, no export — generate more coverage (PLAYBOOK §6/§9)**
 - [ ] Runtime: long-form 9–11 min from narration · Short 45–60 s
 - [ ] Export verified in My Videos at High/FullHD, correct ratio, downloaded/archived

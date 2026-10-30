@@ -3,7 +3,8 @@
 ## Overview
 - Format: 16:9 long-form / 9:16 Short · Target runtime: · Generation count: ·
 - **Coverage math (PLAYBOOK §6, mandatory):** estimated narration ___ s ·
-  clip length planned 8–10 s · generations needed = ⌈ narration s ÷ 9 ⌉ + ~10% = ___ ·
+  clip length = its narration beat's measured length, max 10 s (PLAYBOOK §6) ·
+  narration beats (≤10 s each) = ___ · B-roll margin +10% = ___ · planned clips: ___ ·
   planned generations ___ · measured narration (after generation) ___ s ·
   measured footage running total ___ s
 - Bible: `templates/character-and-company-bible.md` instance → (link/copy location)

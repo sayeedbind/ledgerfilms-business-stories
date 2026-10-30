@@ -5,7 +5,7 @@ user message disagree, the user wins. When this file and an upstream playbook di
 this file wins — it is the LedgerFilms adaptation.
 
 **Channel:** LedgerFilmsHQ  
-**v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
+**v1.7 change (2026-10-31):** **scene length follows the voiceover** — narration is split into ≤10 s beats and each clip is generated at its beat's measured duration (a 5 s line = a 5 s scene); scene count = beat count + ~10% B-roll (§6). · **v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
 **Formats:** Long-form ~10:00, 16:9 · Shorts 45–60 s, 9:16 · Nothing else. Never 1:1.
 **Look:** cinematic AI art (photoreal-cinematic), faceless, narration-led.
 
@@ -158,19 +158,21 @@ seconds count.**
    script (words ÷ ~150 wpm × 60 for planning). After narration is generated (§8),
    replace the estimate with its **measured** duration — that number is the coverage
    target, and it is final.
-2. **Clip length is 8–10 s — up to the 10 s maximum the dialog supports.** Set
-   Manual Video Length to the beat's length (max **10 s**) and state the duration in
-   the clip's [ACTION]. Scene planning should use the full 10 s where the beat
-   allows — more story per generation, fewer clips to juggle. A route that silently
-   returns ~5 s clips (e.g. plain Text To Video with no length set) does **not**
-   satisfy a plan written for 8–10 s clips — re-plan the count at the measured length.
-3. **Scene count formula:** generations needed = ⌈ narration seconds ÷ 9 ⌉ at the
-   conservative 9 s planning average (⌈ ÷ 10 ⌉ if every clip is set to the full
-   10 s), plus a ~10% safety margin of extra B-roll / motif generations. Worked
-   examples: 7:24 of narration (444 s) → at least 50 generations at 9 s, plan ~55
-   (⌈444 ÷ 10⌉ = 45 if all clips run 10 s); ~10:00 (600 s) → at least 67 at 9 s,
-   plan ~74 (60 at 10 s). A 30-scene plan can only ever cover ~4:00–5:00 at these
-   clip lengths — never promise it covers a long-form.
+2. **Clip length = its voiceover beat's length (max 10 s).** Split the narration into
+   **beats of ≤10 s of spoken narration** (≈ ≤25 words at 145 wpm — one idea per beat,
+   cut at sentence boundaries). Each scene's Manual Video Length is set to that beat's
+   narration duration: a 5 s line gets a 5 s scene, a 10 s line a 10 s scene. After
+   the narration exists, replace each beat's word-count estimate with its **measured**
+   audio duration. A route that silently returns ~5 s clips does not satisfy a plan
+   written for measured beat lengths — re-plan at the measured length.
+3. **Scene count formula:** scenes = **number of narration beats** after splitting
+   the script into ≤10 s segments (≈ ≤25 words each), plus a ~10% safety margin of
+   extra B-roll / motif generations. Quick check: ⌈ narration seconds ÷ 10 ⌉ is the
+   floor (600 s → ≥60 beats, plan ~66); a script with many short punch lines yields
+   more, shorter scenes. Because each scene is generated at its beat's measured
+   length, scene seconds sum to the narration total by construction — the B-roll
+   margin covers trims. A 30-scene plan can only ever cover ~4:00–5:00 — never
+   promise it covers a long-form.
 4. **Running total while generating:** record every finished clip's **measured**
    duration in the storyboard and keep a running footage total. Stop generating only
    when the measured total ≥ the narration target. If it falls short, generate
@@ -196,10 +198,10 @@ seconds count.**
    output — **max 3 attempts per clip**, changing one variable per retry. Keep usable clips
    despite minor gaze/camera differences; save deep QA for the final pass.
 6. Public gallery **off** on everything. No music in any clip.
-7. **Duration discipline:** generate every clip at 8–10 s (see §6 coverage math), and
-   record each finished clip's **measured** duration in the storyboard with a running
-   footage total. Assumed durations are not evidence — a clip counts only for the
-   seconds it actually runs.
+7. **Duration discipline:** generate each clip at its **beat's narration length**
+   (max 10 s — see §6), and record each finished clip's **measured** duration in the
+   storyboard against its beat. Assumed durations are not evidence — a clip counts
+   only for the seconds it actually runs.
 
 ## 8. Narration & sound
 

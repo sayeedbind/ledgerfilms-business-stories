@@ -18,9 +18,10 @@ UI — if a label differs, follow the PLAYBOOK's intent and note the change in t
 - **The dialog trap:** before EVERY submission, check the settings *inside the generation
   dialog* — its ratio selector can reset to 9:16 and prompt-enhancement can re-tick after
   a re-render, independently of the project bar. Fix only what reset; keep references.
-- **Clip duration:** Manual Video Length supports up to **10 s** — plan scenes to use
-  the full 10 s where the beat allows (more story per generation); keep 9 s as the
-  conservative coverage-math average (PLAYBOOK §6).
+- **Clip duration:** Manual Video Length supports up to **10 s** — and it should
+  **match the clip's narration beat**: split the voiceover into ≤10 s beats and set
+  each scene's length to its beat's measured audio duration (a 5 s line = a 5 s
+  scene). PLAYBOOK §6.
 - **Parallel renders:** up to 5 concurrent video jobs on many accounts — the visible
   account limit is the rule. A full queue is a wait state, not an error.
 - **Assembly:** Media Library → My Media → My AI Videos → **drag** each completed clip

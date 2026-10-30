@@ -1,11 +1,13 @@
 # Storyboard — LONG-FORM [title]
 
 One row per generation. Visual beat changes every 3–5 s inside the multi-shot clips.
-Each generation is planned at **8–10 s** (PLAYBOOK §6 coverage math).
+Each generation is planned at **its narration beat's length, max 10 s** (PLAYBOOK §6):
+split the script into ≤10 s beats (≈ ≤25 words), measure each beat's narration audio,
+set the clip's Manual Video Length to that duration.
 
 **Coverage header — fill before generation, update while generating:**
 Estimated narration: ___ s · Measured narration (after §8): ___ s ·
-Generations needed = ⌈ narration s ÷ 9 ⌉ + ~10% = ___ · Planned clips: ___
+Narration beats (≤10 s each) = ___ · B-roll margin +10% = ___ · Planned clips: ___
 
 | Clip | Time | Narration lines | Shots (angle per shot) | Incoming → Action → Outgoing | Refs (master/location) | Planned s | Measured s | Status |
 |---|---|---|---|---|---|---|---|---|

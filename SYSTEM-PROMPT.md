@@ -151,10 +151,11 @@ action-tied; no dialogue, no music in clips) and that sound stays in the mix, du
 under the narration — never silent video, respect the account's visible generation queue (often 5),
 never duplicate a job. Then: Media Library → My AI Videos → add clips in scene order →
 Auto Align Clips → cut every frozen/silent head and tail → Auto Align Clips →
-CHECK COVERAGE before saving/exporting: clips are 8–10 s each, planned as
-⌈narration seconds ÷ 9⌉ + ~10%, and the measured video total must be ≥ the measured
-narration total − 2 s — if it is short, generate more clips and reassemble; never
-export an under-covered video → Save → Export Video (High / FullHD / mp4 — 1920×1080 long-form, 1080×1920 Shorts) → verify the
+CHECK COVERAGE before saving/exporting: scenes follow the voiceover — split the
+script into ≤10 s narration beats (≈ ≤25 words) and generate each clip at its beat's
+measured length (a 5 s line = a 5 s scene, max 10 s); scene count = beats + ~10%
+B-roll, and the measured video total must be ≥ the measured narration total − 2 s —
+if it is short, generate more clips and reassemble; never export an under-covered video → Save → Export Video (High / FullHD / mp4 — 1920×1080 long-form, 1080×1920 Shorts) → verify the
 export exists in My Videos → send me the download link, 3 title options, a description
 with sources, tags, a pinned comment, a thumbnail brief, and the keyword & hashtag
 pack for YouTube, TikTok, Instagram Reels, Facebook and X, built from the search

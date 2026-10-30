@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.7 — 2026-10-31
+- **Scene length follows the voiceover.** The narration is split into **beats of
+  ≤10 s** (≈ ≤25 words, one idea per beat, sentence boundaries); each scene's Manual
+  Video Length is set to its beat's **measured** narration duration — a 5 s line gets
+  a 5 s scene, a 10 s line a 10 s scene (10 s is the dialog maximum). Scene count =
+  beat count + ~10% B-roll; scene seconds sum to the narration total by construction.
+  Replaces the fixed ⌈÷9⌉ planning average across PLAYBOOK §6, the storyboard
+  template, long-form workflow, pacing-and-trim, videoexpress-ui-map,
+  PROMPT_COMPACT, SYSTEM_PROMPT and README.
+
 ## v1.6 — 2026-10-30
 - **Trending topics: user picks.** When the run starts with Topic = Trending (or no
   topic), the agent now researches live signals, scores the candidates, and presents
