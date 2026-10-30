@@ -26,8 +26,10 @@ optional variant in the bible template); 60 s–5 min duration → ~10 min long-
 CloneVoice standalone route → VideoExpress in-app narration route (from repo 3).
 
 ## 3. ai-playbooks/videoexpress-stickman-story-agent — narration & continuity ops
-**Kept:** the in-VideoExpress narration route (Narration Video → Create Video → voice →
-create audio → generate video); design the whole sequence before generating (incoming →
+**Kept (revised 2026-10-30):** narration is created in VideoExpress, but via the
+standalone Import Media → Text to Speech route in ≤1,000-character chunks — the
+Narration Video dialog route from the stickman agent proved unusable for long
+voice-overs (120-character cap, replace-per-import); design the whole sequence before generating (incoming →
 action → outgoing → next-opening states); fresh start images from the master rather than
 last-frame chaining by default; fixed location layouts with counts/positions that must not
 drift; concurrent-slot discipline (often 5, full queue = wait, never duplicate); max

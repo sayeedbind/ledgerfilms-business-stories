@@ -4,9 +4,12 @@
   template the first time, then reuse forever. Default narrator: a calm American-English
   system voice (the documentary upstream used a "Daniel Reed"-style presenter voice and
   an "Ethan Sterling"-style narration voice — pick ONE for LedgerFilms and lock it).
-- **Route:** narration is created inside VideoExpress (Narration Video → Create Video →
-  voice → create audio → generate video). Standalone voice-tool downloads/imports are not
-  the default route.
+- **Route (field-tested 2026-10-30):** Import Media → Text to Speech (standalone panel).
+  NOT the dialog's Narration Video flow — it caps its text box at 120 characters and each
+  import replaces the pending audio, so it cannot build a long voice-over. The standalone
+  tool accepts 2,400 characters but imports above ~1,100 can fail silently: use
+  ≤1,000-character sentence-boundary chunks. Every import lands in My AI Audio labelled
+  by its opening words (record asset IDs in script order). Generate once and lock.
 - **Locked means locked.** Generate the narration once. Its real duration sets the video's
   runtime. No re-generation, cuts, silence-trimming or speed changes to hit a target
   length — adjust the picture instead (PLAYBOOK §9).

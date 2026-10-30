@@ -12,3 +12,11 @@
 | A clip keeps failing (3 attempts) | One stubborn variable | Change ONE variable per retry; if still failing, restage the beat simpler (one subject, locked camera) and escalate to the user |
 | Era errors (smartphone in 1998) | Era block missing from that prompt | Era & outfit block is mandatory in every prompt; era errors are QC fails |
 | Script claim challenged / wrong | Weak sourcing | Same-day pinned correction + description fix; log in the research brief |
+
+| Narration text box caps at 120 characters | You are in the generation dialog's "Narration Video" flow | Use the standalone Import Media → Text to Speech route (PLAYBOOK §8); the dialog flow cannot build a long voice-over |
+| Long TTS import produces no audio and no error | Import above the practical ~1,100-character cap (counter says 2,400) | Split narration into ≤1,000-character sentence-boundary chunks; verify each import created a My AI Audio asset |
+| Narration chunk replaced instead of appended | Each Import Speech replaces the panel's pending audio | The library keeps every import (My AI Audio, label = opening words); drag assets to the timeline in script order |
+| Narration assets unfindable / wrong order | TTS panel shows only the latest import; My AI Audio mixes all past projects | Match chunks by their opening-words labels and recorded /library/download/<id> asset IDs, never by grid position |
+| Drag from library lands nowhere | Target track clipped below the viewport (media panel open, short viewport) | Raise the browser viewport height or close the media panel; drop again |
+| Second timeline track disappeared | A track header's bin deletes the whole track, not just clips | Reload the page — the default two-track layout returns |
+| Delete key no-op on a timeline clip | Editor quirk | Select the clip and use toolbar delete/cut; verify before re-adding |

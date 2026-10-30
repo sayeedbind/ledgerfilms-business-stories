@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.5 — 2026-10-30
+- **Narration route fixed (field-tested):** the generation dialog's "Narration Video"
+  flow cannot build a long voice-over — it requires a generated start image, caps its
+  text box at 120 characters, and each Import Speech replaces the pending audio (closing
+  the dialog loses it). The channel route is now the standalone **Import Media → Text
+  to Speech** panel: 2,400-char counter but a practical ~1,100-character cap (imports
+  above it fail silently — 2,326 chars failed; 699/1,074 chars succeeded), so narration
+  ships as **≤1,000-character sentence-boundary chunks**. Every import persists in
+  **My AI Audio** labelled by its opening words with a `/library/download/<id>` link —
+  record asset IDs per chunk in script order. PLAYBOOK §7.1/§8/§9, SYSTEM_PROMPT(v1.5),
+  SYSTEM-PROMPT mirror, PROMPT_COMPACT, docs/source-map, narration-and-sound and
+  videoexpress-ui-map references updated.
+- **Timeline mechanics documented:** library assets (video and narration audio) are
+  added by drag-and-drop only; drops aimed below the visible track area land nowhere —
+  raise the viewport height or close the media panel; a track header's bin deletes the
+  whole track row (page reload restores the default two-track layout); the Delete key
+  is unreliable on clips. Added to PLAYBOOK §9 and docs/troubleshooting.md.
+
 ## v1.4 — 2026-10-29
 - **Footage-coverage gate (blocking) — fixes the Dollar General underrun.** The first
   Dollar General export had ~2:42 of picture against 7:24 of narration: 30 scenes had

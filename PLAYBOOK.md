@@ -173,10 +173,12 @@ seconds count.**
 
 ## 7. Generation in VideoExpress
 
-1. **Route:** Long-form/Shorts are narration-led: build scenes as image → video, then the
-   narration route for voice: **Narration Video → Create Video → voice → create audio →
-   generate video**. Advanced Mode off unless a multi-shot clip needs it; when used, keep
-   automatic enhancement OFF and Manual Video Length ON.
+1. **Route:** Long-form/Shorts are narration-led: build scenes as image → video, and the
+   voice via the **standalone Text-to-Speech route — Import Media → Text to Speech**
+   (field-tested 2026-10-30: the generation dialog's "Narration Video" flow caps its text
+   box at 120 characters and each import replaces the pending audio — it cannot build a
+   10-minute voice-over; details in §8). Advanced Mode off unless a multi-shot clip needs
+   it; when used, keep automatic enhancement OFF and Manual Video Length ON.
 2. **Style routing:** channel look = Image Type **Photorealistic (Cinematic)**, Creative
    mode **off**, style line (§5) carried in the prompt text instead.
 3. **Re-check settings in the generation dialog itself** before every submission — the
@@ -197,11 +199,24 @@ seconds count.**
 
 - One narrator: the channel voice, same system voice + settings for every video
   (record them in the bible). Cloned voice only with the speaker's permission.
+- **Route (field-tested 2026-10-30): Import Media → Text to Speech** (the standalone
+  panel). Do **not** use the generation dialog's "Narration Video" checkbox: it requires
+  a generated start image, caps its text box at **120 characters**, and each Import
+  Speech **replaces** the pending audio (closing the dialog loses it entirely).
+- **Chunking:** the standalone tool's counter reads 2,400 characters, but imports above
+  ~1,100 characters can **fail silently** (2,326 chars → no audio, no error; 699 and
+  1,074 chars succeeded). Split the narration into **≤1,000-character chunks** at
+  sentence boundaries. Rendering takes ~10 s per ~120 characters.
+- **Library assets:** every successful import lands in **Media Library → My Media →
+  My AI Audio**, labelled with the chunk's opening words, each with a
+  `/library/download/<id>` link. Record asset IDs per chunk in script order — the TTS
+  panel row shows only the latest import. The list mixes all past projects: match
+  chunks by their opening-words labels, never by grid position.
 - **Generate narration once and lock it.** Its real length sets the final runtime —
   the video is cut to the voice, never the reverse. **Measure its duration in seconds
   as soon as it exists and write it into the storyboard/prompt pack** — it is the
-  coverage target for the §9 underrun gate. If narration is generated in chunks
-  (e.g. a per-chunk text cap), sum the chunk durations; the total is the target.
+  coverage target for the §9 underrun gate. Chunks: sum the measured chunk durations;
+  the total is the target.
 - Presenter/dialogue audio (rare, only if the user asks for an intro) stays audible;
   all scene-clip audio is **muted under the narration**.
 - Music: none in generation; one licensed/library track added at assembly, low, ducked
@@ -210,8 +225,15 @@ seconds count.**
 ## 9. Assembly & the dead-air trim
 
 1. Media Library → My Media → My AI Videos; add clips to the timeline **in planned scene
-   order**, verifying one clip lands before adding the next; no duplicates.
-2. Place narration to start at frame 1 (long-form) — no presenter gap by default.
+   order**, verifying one clip lands before adding the next; no duplicates. Audio assets
+   (narration chunks) are added the same way — **drag-and-drop only**, from My AI Audio;
+   a single click only selects. If a drop lands nowhere, the target track is probably
+   clipped below the viewport: raise the browser viewport height or close the media
+   panel. Never clear a track with its header bin — it deletes the whole track row
+   (reload restores the default two-track layout).
+2. Place narration to start at frame 1 (long-form) — no presenter gap by default. Drag
+   the narration chunks onto the audio track **in script order** (verify each label:
+   the asset's name is its opening words).
 3. **Auto Align Clips**, then the trim pass: at timeline zoom ~40 px/s, cut and delete
    every frozen or silent head and tail; close every gap. In Shorts, no shot may outlive
    its narration line.

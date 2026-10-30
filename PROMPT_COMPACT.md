@@ -50,9 +50,10 @@ parallel limit (often 5); a full queue means wait, never duplicate. Max 3 attemp
 clip, one variable changed per retry.
 
 NARRATION: one channel narrator (system voice by default; cloned only with permission),
-created in VideoExpress via Narration Video → Create Video → voice → create audio →
-generate video. Generated ONCE and locked — its length sets the runtime. Scene audio
-muted underneath. Music only at assembly, low, ducked.
+built via Import Media → Text to Speech in ≤1,000-character sentence-boundary chunks
+(the dialog's Narration Video flow caps at 120 characters — unusable for long voice-over);
+each import saves a My AI Audio asset labelled by its opening words. Generated ONCE and
+locked — the measured chunk-duration total sets the runtime. Scene audio muted underneath. Music only at assembly, low, ducked.
 
 EDIT & EXPORT: timeline in scene order, verify each clip lands, Auto Align, then cut
 every frozen/silent head and tail and close gaps (Shorts: no shot outlives its line).
