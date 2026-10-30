@@ -198,8 +198,9 @@ Image Type "Photorealistic (Cinematic)", Creative mode OFF, "Automatically enhan
 video prompt" OFF, public gallery OFF, and re-check the ratio in the generation dialog
 itself (it resets). Narration route: Narration Video → Create Video → one channel voice →
 create audio → generate video. Generate the narration once and lock it — it sets the final
-runtime; cut the picture to the voice, never the reverse. Mute all clip audio under the
-narration, no music in clips, respect the account's visible generation queue (often 5),
+runtime; cut the picture to the voice, never the reverse. Every clip is generated WITH
+its described production sound (transient, action-tied; no dialogue, no music in clips)
+and that sound stays in the mix, ducked low under the narration — never silent video, respect the account's visible generation queue (often 5),
 never duplicate a job. Then: Media Library → My AI Videos → add clips in scene order →
 Auto Align Clips → cut every frozen/silent head and tail → Auto Align Clips →
 CHECK COVERAGE before saving/exporting: clips are 8–10 s each, planned as

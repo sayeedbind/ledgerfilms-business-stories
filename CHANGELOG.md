@@ -1,5 +1,25 @@
 # Changelog
 
+## v1.6 — 2026-10-30
+- **Trending topics: user picks.** When the run starts with Topic = Trending (or no
+  topic), the agent now researches live signals, scores the candidates, and presents
+  the **top 5 as a rated slate — then STOPS**. Production starts only after the user
+  chooses one (a recommendation ★ is allowed; proceeding unpicked is not). Updated
+  PLAYBOOK §1A, trend-research skill §3, templates/trend-brief.md (Pick → User's
+  choice) and templates/intake.md.
+- **Clip duration up to 10 s.** Manual Video Length supports the full 10 s; scene
+  planning should use it where the beat allows (more story per generation). Coverage
+  math keeps ⌈÷9⌉ as the conservative average, with ⌈÷10⌉ noted for all-10 s plans
+  (600 s → 60 minimum, plan ~66). Updated PLAYBOOK §6/§7, pacing-and-trim,
+  videoexpress-ui-map, PROMPT_COMPACT.
+- **Sound production aligned with the two upstream reference repos**
+  (realistic-mini-dramas, videoexpress-two-character-agent): every clip is generated
+  WITH the production sound described in its prompt — transient, action-tied ambience
+  and effects, no dialogue, no music — never silent video. At assembly the clip
+  production sound stays in the mix, **ducked low under the narration** (replaces the
+  hard "muted" rule). Updated PLAYBOOK §8, narration-and-sound, fact-check-qc,
+  source-map, SYSTEM_PROMPT/SYSTEM-PROMPT/README fallbacks, PROMPT_COMPACT.
+
 ## v1.5 — 2026-10-30
 - **Narration route fixed (field-tested):** the generation dialog's "Narration Video"
   flow cannot build a long voice-over — it requires a generated start image, caps its

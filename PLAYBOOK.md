@@ -4,7 +4,8 @@ The full production instructions. `SYSTEM-PROMPT.md` loads this file. When this 
 user message disagree, the user wins. When this file and an upstream playbook disagree,
 this file wins — it is the LedgerFilms adaptation.
 
-**Channel:** LedgerFilmsHQ · AI-Illustrated Business & Money Stories
+**Channel:** LedgerFilmsHQ  
+**v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
 **Formats:** Long-form ~10:00, 16:9 · Shorts 45–60 s, 9:16 · Nothing else. Never 1:1.
 **Look:** cinematic AI art (photoreal-cinematic), faceless, narration-led.
 
@@ -32,7 +33,9 @@ can be checked.
 2. **Filter** to the channel pillars with a revealable money mechanism; apply the
    skill's drop list (off-niche hype, rumours, advice bait, legally unbacked claims).
 3. **Score** survivors on the skill's 10-factor /50 rubric, fill
-   `templates/trend-brief.md`, mark one pick (★) and proceed with it. State each
+   `templates/trend-brief.md`, and present the **top 5 as a ranked slate with each
+   item's rating (/50)** — then **STOP and wait for the user to choose one**.
+   Production on a trending topic starts only after the user's pick. State each
    candidate's publish-by window — a trend whose window can't fit the cadence is a
    Short or a pass, never a rushed long-form.
 4. **User gave a topic instead:** run the skill's light pass only — timeliness and
@@ -155,16 +158,19 @@ seconds count.**
    script (words ÷ ~150 wpm × 60 for planning). After narration is generated (§8),
    replace the estimate with its **measured** duration — that number is the coverage
    target, and it is final.
-2. **Clip length is 8–10 s.** VideoExpress clips for this channel are planned and
-   generated at 8–10 s each (set the duration / Manual Video Length where the route
-   offers it, and state the duration in the clip's [ACTION]). A route that silently
+2. **Clip length is 8–10 s — up to the 10 s maximum the dialog supports.** Set
+   Manual Video Length to the beat's length (max **10 s**) and state the duration in
+   the clip's [ACTION]. Scene planning should use the full 10 s where the beat
+   allows — more story per generation, fewer clips to juggle. A route that silently
    returns ~5 s clips (e.g. plain Text To Video with no length set) does **not**
    satisfy a plan written for 8–10 s clips — re-plan the count at the measured length.
-3. **Scene count formula:** generations needed = ⌈ narration seconds ÷ 9 ⌉, plus a
-   ~10% safety margin of extra B-roll / motif generations. Worked examples:
-   7:24 of narration (444 s) → at least 50 generations, plan ~55;
-   ~10:00 (600 s) → at least 67 generations, plan ~74. A 30-scene plan can only ever
-   cover ~4:00–5:00 at these clip lengths — never promise it covers a long-form.
+3. **Scene count formula:** generations needed = ⌈ narration seconds ÷ 9 ⌉ at the
+   conservative 9 s planning average (⌈ ÷ 10 ⌉ if every clip is set to the full
+   10 s), plus a ~10% safety margin of extra B-roll / motif generations. Worked
+   examples: 7:24 of narration (444 s) → at least 50 generations at 9 s, plan ~55
+   (⌈444 ÷ 10⌉ = 45 if all clips run 10 s); ~10:00 (600 s) → at least 67 at 9 s,
+   plan ~74 (60 at 10 s). A 30-scene plan can only ever cover ~4:00–5:00 at these
+   clip lengths — never promise it covers a long-form.
 4. **Running total while generating:** record every finished clip's **measured**
    duration in the storyboard and keep a running footage total. Stop generating only
    when the measured total ≥ the narration target. If it falls short, generate
@@ -217,8 +223,12 @@ seconds count.**
   as soon as it exists and write it into the storyboard/prompt pack** — it is the
   coverage target for the §9 underrun gate. Chunks: sum the measured chunk durations;
   the total is the target.
-- Presenter/dialogue audio (rare, only if the user asks for an intro) stays audible;
-  all scene-clip audio is **muted under the narration**.
+- **Clip sound follows the upstream reference method** (realistic-mini-dramas,
+   videoexpress-two-character-agent): every clip is **generated with the production
+   sound described in its prompt** — transient, action-tied ambience and effects, no
+   dialogue, no music — never silent video. At assembly that production sound stays
+   in the mix, **ducked low under the narration** (not hard-muted), so scenes stay
+   alive without competing with the voice.
 - Music: none in generation; one licensed/library track added at assembly, low, ducked
   under narration, same track family across the channel.
 

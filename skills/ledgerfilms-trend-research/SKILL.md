@@ -56,8 +56,9 @@ Score every survivor with `references/hot-topic-scoring.md` (trend velocity, sea
 demand vs. supply, pillar fit, mechanism strength, advertiser fit, evergreen tail,
 visual feasibility in VideoExpress, legal risk). Deliver a slate of **up to 5** in a
 `templates/trend-brief.md`: each with its evidence links, its "why now", its publish-by
-window, and its score. **Mark one pick (★)** and say in one line why it wins. Then
-proceed with the pick — the user can redirect to any other slate item.
+window, and its score. **Rank all five by score and STOP.** The user chooses one
+from the slate — production starts only on the user's choice. Recommend one (★, one
+line why) so the user can accept it with a word, but never proceed unpicked.
 
 ### 4. Light pass (user supplied the topic)
 

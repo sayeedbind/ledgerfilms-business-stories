@@ -29,8 +29,9 @@ and the two-source rule (PLAYBOOK §2).
 ## Rejected on this scan (and why)
 - [Candidate] — dropped because: (off-pillar / rumour / saturated / window / legal)
 
-## Pick
-- **★ Pick:** · **Why it wins (one line):**
+## User's choice (production starts ONLY after the user picks one)
+- **Recommended (★):** · **Why it wins (one line):**
+- **User picked:** ____________ (date: )
 - **If the pick dies in fact-check, fall back to:** (slate #2, or topic-bank evergreen)
 
 ## Keyword seed for the pick (full pack is built at upload — see upload-metadata)

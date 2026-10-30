@@ -15,9 +15,12 @@
   length — adjust the picture instead (PLAYBOOK §9).
 - **Voices and permission:** system voices by default. A cloned voice only with the
   speaker's documented permission for this use.
-- **Mix:** narration on top, always intelligible. Scene-clip audio muted beneath it.
-  Music enters only at assembly: one track, low, ducked; never generated inside clips
-  (per-clip music makes cuts unmatchable).
+- **Mix (upstream reference method):** clips are generated WITH the production sound
+  described in their prompts — transient, action-tied ambience and effects, no
+  dialogue, never silent video. Narration sits on top, always intelligible; clip
+  production sound stays in the mix, ducked low beneath the voice. Music enters only
+  at assembly: one track, low, ducked; never generated inside clips (per-clip music
+  makes cuts unmatchable).
 - **Production sound inside clips:** transient, action-tied sounds only (a till drawer,
   a shutter, rain on a window). Never request "silence" (renders as rumble) and never
   background music in a [PRODUCTION SOUND] block.

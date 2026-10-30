@@ -19,7 +19,7 @@ ALL boxes must pass — or the failure is disclosed to the user with the export.
 
 **Sound**
 - [ ] Channel narrator, locked take, starts at frame 1 (long-form) with no gap
-- [ ] Scene audio muted under narration; music only the assembly track, ducked
+- [ ] Clip production sound ducked low under narration (clips generated WITH described sound, never silent); music only the assembly track, ducked
 - [ ] No invented dialogue from any character
 
 **Edit & export**

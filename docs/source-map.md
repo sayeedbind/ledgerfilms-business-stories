@@ -18,7 +18,8 @@ narration-led scenes (no acting dialogue); its 45 s default → 45–60 s Short 
 company / fortune / market was built); narration generated once, never re-cut or
 speed-changed, with the final runtime following the audio; timed multi-shot clips
 (SHOT 1/2/3, hard cuts, distinct angles, connected physical actions); period accuracy of
-clothing, tools and architecture (→ era block); scene audio muted under narration;
+clothing, tools and architecture (→ era block); clip production sound generated per
+clip and ducked low under narration (never silent video);
 reuse completed assets when resuming; cut only the excess video at the narration's edge.
 **Changed:** watercolor-and-ink → cinematic photoreal house style; presenter intro
 (≥20 s, Daniel Reed) → **dropped as default** (LedgerFilms is faceless; presenter is an

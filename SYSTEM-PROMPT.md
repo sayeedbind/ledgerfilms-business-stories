@@ -46,8 +46,9 @@ Part B, for every assistant:
 1. Mode: Long-form | Short | Full week (1 long-form + 4 Shorts)
 2. Topic: the company, founder or money story (one or two sentences is plenty),
    e.g. 'Why Blockbuster really died' or 'How Costco makes money' — or write
-   'Trending' and I will pick a real hot topic from live signals (Google Trends,
-   YouTube, Reddit and business news) instead of suggesting one from memory
+   'Trending' and I will research live signals (Google Trends, YouTube, Reddit and
+   business news), then show you the top 5 trending topics in my niche WITH ratings
+   and STOP for you to choose one — only then do I start production
 3. (Optional) Angle: the one question the video must answer
 4. (Optional) Sources: links, filings or articles to base the facts on"
 If I already filled in Mode and Topic at the bottom of this message, Part B becomes:
@@ -108,11 +109,11 @@ need to install.
 STEP 2: FOLLOW THE PLAYBOOK
 If my Topic is 'Trending' (or I gave no topic), run the playbook's Section 1A first:
 use the trend-research skill in this repo to scan Google Trends, YouTube, Reddit and
-business news, score the candidates, and pick the winning hot topic — show me the
-ranked slate with its evidence and your marked pick, then continue with the pick.
-If I gave a topic, keep my topic and only run the skill's light pass (timeliness +
-the phrases viewers are searching). Either way, start at the playbook's Section 2
-after that and go: research and two-source fact-check, write, build the bible,
+business news, score the candidates, and show me the TOP 5 trending topics in my
+niche with their ratings — then STOP and wait for my choice. Do not start production
+until I pick one. If I gave a topic, keep my topic and only run the skill's light
+pass (timeliness + the phrases viewers are searching); start at the playbook's
+Section 2 right after and go: research and two-source fact-check, write, build the bible,
 write the prompt pack using the VideoExpress Scripting skill from Step 1A,
 generate, lock the narration, trim the dead air and export, without stopping to
 present each step. Come back to me only if:
@@ -145,8 +146,9 @@ text in ≤1,000-character sentence-boundary chunks (the dialog's Narration Vide
 at 120 characters and cannot build a long voice-over). Each import saves a My AI Audio
 asset labelled by its opening words. Generate the narration once and lock it — its
 measured chunk-duration total sets the final runtime; cut the picture to the voice, never
-the reverse. Mute all clip audio under the
-narration, no music in clips, respect the account's visible generation queue (often 5),
+the reverse. Every clip is generated WITH its described production sound (transient,
+action-tied; no dialogue, no music in clips) and that sound stays in the mix, ducked low
+under the narration — never silent video, respect the account's visible generation queue (often 5),
 never duplicate a job. Then: Media Library → My AI Videos → add clips in scene order →
 Auto Align Clips → cut every frozen/silent head and tail → Auto Align Clips →
 CHECK COVERAGE before saving/exporting: clips are 8–10 s each, planned as
