@@ -189,12 +189,13 @@ STACK: Playbook v<version> · Filmcraft loaded <date> · Scripting adaptation lo
 STEP 2: FOLLOW THE PLAYBOOK
 If my Topic is 'Trending' (or I gave no topic), run the playbook's Section 1A first:
 use the trend-research skill in this repo to scan Google Trends, YouTube, Reddit and
-business news, score the candidates, and pick the winning hot topic — show me the
-ranked slate with its evidence and your marked pick, then continue with the pick.
-If I gave a topic, keep my topic and only run the skill's light pass (timeliness +
-the phrases viewers are searching). Either way, start at the playbook's Section 2
-after that and go: research and two-source fact-check, write the two-column AV
-screenplay and build the bible and prompt pack using the bound stack from Step 1A,
+business news, score the candidates, and show me the TOP 5 trending topics in my
+niche with their ratings — then STOP and wait for my choice. Do not start production
+until I pick one. If I gave a topic, keep my topic and only run the skill's light
+pass (timeliness + the phrases viewers are searching); start at the playbook's
+Section 2 right after and go: research and two-source fact-check, write the
+two-column AV screenplay and build the bible and prompt pack using the bound
+stack from Step 1A,
 generate, lock the narration, trim the dead air and export, without stopping to
 present each step. Come back to me only if:
 - I need to sign in (VideoExpress or GitHub), accept VideoExpress's one-time Terms
