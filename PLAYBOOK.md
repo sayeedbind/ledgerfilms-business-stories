@@ -185,8 +185,13 @@ seconds count.**
    voice via the **standalone Text-to-Speech route — Import Media → Text to Speech**
    (field-tested 2026-10-30: the generation dialog's "Narration Video" flow caps its text
    box at 120 characters and each import replaces the pending audio — it cannot build a
-   10-minute voice-over; details in §8). Advanced Mode off unless a multi-shot clip needs
-   it; when used, keep automatic enhancement OFF and Manual Video Length ON.
+   10-minute voice-over; details in §8). **Advanced Mode ON whenever a clip's length
+   must be controlled** — the Manual Video Length control only appears with Advanced
+   Mode ticked (owner-confirmed 2026-11-03; with it off, the dialog shows no length
+   control and clips default to ~5 s, which failed the §9 gate on the Anthropic run).
+   Keep automatic enhancement OFF and set Manual Video Length to the beat's measured
+   narration seconds. (Separate route, owner-confirmed: when a clip's voiceover is
+   generated *with* the video, its length follows the voiceover playtime automatically.)
 2. **Style routing:** channel look = Image Type **Photorealistic (Cinematic)**, Creative
    mode **off**, style line (§5) carried in the prompt text instead.
 3. **Re-check settings in the generation dialog itself** before every submission — the

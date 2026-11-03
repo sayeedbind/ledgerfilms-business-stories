@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.12 — 2026-11-03
+- **Owner correction from the Anthropic run, written into the rules:** the Manual
+  Video Length control exists **only with Advanced Mode ticked ON** — with it off,
+  the generation dialog shows no length control and clips default to ~5 s (all 58
+  clips of LF-20261103-anthropic-ipo measured ~5 s, failing the §9 gate against
+  397 s of narration; repaired with second-angle clips). PLAYBOOK §7 now requires
+  Advanced Mode ON for length-critical generations (enhancement OFF, length = the
+  beat's measured narration seconds), and the filmcraft capabilities reference
+  carries the same rule. Also recorded (owner): when a clip's voiceover is
+  generated *with* the video, its length follows the voiceover playtime
+  automatically — a distinct route from the channel's standalone TTS.
+
 ## v1.11 — 2026-11-03
 - **The finishing layer (owner-approved gap audit).** Filmcraft gains
   `references/finishing.md`: score & designed effects planned in the screenplay
