@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.10 — 2026-11-03
+- **Speed discipline (owner's rule: fast execution, no wasted time).** An audit
+  found no explicit speed instructions anywhere in the repo — the rule lived
+  only in the owner's Muse memory from the 2026-11-03 01:10 correction (a
+  finished on-site task left idle while the agent waited). Now written into the
+  production-stack skill as a named section — no idle waiting (prepare the next
+  step while renders run), batch to the visible queue limit, verify only at
+  segment checkpoints, chase every finish into the next step in the same
+  session, change tactic after the same failure twice, report measured totals
+  at segment boundaries, proof-segment gate as the fail-fast rule — and into
+  SYSTEM_PROMPT Step 1A item 4 plus the fallback essentials (WORK FAST line).
+  Prompt v1.10; synced into SYSTEM-PROMPT.md (mirror) and the README block.
+
 ## v1.9 — 2026-11-03
 - **Professional editing standard + the EDIT PASS command (owner's directives).**
   Story must follow the topic, cinematography must follow the script & voiceover,

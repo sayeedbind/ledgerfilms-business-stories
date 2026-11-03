@@ -4,7 +4,7 @@ This skill binds the LedgerFilms skills into ONE mandatory load for every agent 
 
 ## The stack, in load order
 1. **PLAYBOOK** (repo `PLAYBOOK.md`) — channel law: formats, fact discipline, coverage gate, publish rules.
-2. **LedgerFilms Filmcraft** (`skills/ledgerfilms-filmcraft/SKILL.md` in this repo + its references: screenplay, cinematography, story-structure, motion-graphics, videoexpress-capabilities) — creative law: two-column AV screenplay, camera language, graphics, the one law (the screen shows what the voice says), blocking QC gates, proof-segment-first.
+2. **LedgerFilms Filmcraft** (`skills/ledgerfilms-filmcraft/SKILL.md` in this repo + its references: screenplay, cinematography, story-structure, motion-graphics, videoexpress-capabilities, editing) — creative law: two-column AV screenplay, camera language, graphics, the one law (the screen shows what the voice says), blocking QC gates, proof-segment-first.
 3. **VideoExpress Scripting — LedgerFilms adaptation** (repo `skills/videoexpress-scripting/SKILL-ADAPTATION.md` + `skills/ledgerfilms-business-stories/references/multishot-prompt-format.md`) — engine mechanics: prompt pack, Core Bible verbatim, tagged start images, timed multi-shot [ACTION], [CAMERA] with destination, chaining, negatives, failure-fix loop. The upstream skill (ratava, CC BY-NC 4.0) is linked, never copied; on platforms where the user has installed it, it may be loaded in this layer's place — flag the licence before commercial reliance.
 4. **Production mechanics** (PLAYBOOK §§7–9 and `workflows/` in this repo; in the owner's Muse environment, the `videoexpress_production` custom skill) — session mechanics: dedicated profile, segmented verified saves, inventory/count gates.
 Plus, when the topic is Trending/blank: **video_trend_research** (repo trend skill) at §1A.
@@ -23,6 +23,15 @@ A run that cannot produce this line truthfully has not started. The capabilities
 ```
 STACK BINDING — mandatory, no subset: (1) PLAYBOOK = channel law (formats, facts, §9 coverage gate). (2) FILMCRAFT = creative law: the screen shows what the voice says, when it says it; two-column AV screenplay; one shot size + angle + ONE motivated camera move per shot; blocking gates (correlation, continuity, camera variety, motif, mute test); proof segment before any full build. (3) VIDEOPRESS SCRIPTING (LedgerFilms adaptation) = engine mechanics: prompt pack with stable IDs, Core Bible verbatim in every prompt, tagged start image first (a clip sees only its start image + prompt), timed multi-shot [ACTION] with hard cuts, [CAMERA] with a destination, Save Last Frame chaining, [NEGATIVES] only for exclusions, failure-fix by mechanism. (4) PRODUCTION = session mechanics: dedicated VideoExpress profile, segmented saves verified by Open-list timestamp, Fast Cut transitions OFF, narration locked once generated. If you cannot load or read any layer, STOP and report which one — do not improvise.
 ```
+
+## Speed discipline (owner's rule: fast execution, no wasted time)
+1. **No idle waiting.** While a generation or export renders, do the next preparation — next prompts, graphics list, upload pack. Watching a progress bar is a failed step.
+2. **Batch to the queue limit.** Fill the account's visible parallel generation slots (often 5); never run strictly one-by-one while slots sit free.
+3. **Verify only at checkpoints.** Segment boundaries are where saves, counts and totals are verified — no mid-segment verification navigation (it wastes time and kills VideoExpress sessions).
+4. **Chase every finish.** The moment a generation, save or export lands, the next step starts in the same session. A completed sub-step is never a stopping point, and a finished on-site task is verified and reported immediately — the owner monitors live and must never see a finished task sitting idle.
+5. **Stall rule.** The same failure twice = change tactic (segment the build, re-sign-in in the same profile, one-variable prompt change). Never loop silently; a clip that fails 3 times is reported (Playbook stop rule).
+6. **Report at segment boundaries** with measured totals, so the owner never has to ask what is happening.
+7. **Fail small, fail fast.** The proof-segment gate is also a speed rule: a wrong approach must die in 90 seconds of footage, not after a 3-hour full build.
 
 ## Precedence
 User's explicit instruction > PLAYBOOK (channel law) > Filmcraft (creative law) > Scripting adaptation (engine mechanics) > Production skill (session mechanics). Conflicts are reported, never silently resolved by the lower layer.
