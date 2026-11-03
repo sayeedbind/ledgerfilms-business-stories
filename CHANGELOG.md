@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.11 — 2026-11-03
+- **The finishing layer (owner-approved gap audit).** Filmcraft gains
+  `references/finishing.md`: score & designed effects planned in the screenplay
+  and mixed to ≈−14 LUFS under the narration; narration performance direction
+  (pauses/emphasis marks in the AUDIO column + a pronunciation respelling list,
+  also added to screenplay.md); grade shot-matching and a no-black/frozen-frame
+  sweep of the finished cut; corrected captions (SRT long-form, burned-in
+  Shorts), chapters, and the title–thumbnail–first-30-seconds packaging
+  triangle; **YouTube AI-content disclosure ticked at upload (blocking)**; and
+  the retention loop (hook ≤5 s, pattern interrupt every ~20–30 s, retention +
+  CTR review at ~72 h and ~7 d with one dated lesson written back). Filmcraft
+  workflow gains step 8 (finishing, mandatory); the production-stack skill
+  gains an “After export” section; `templates/upload-metadata.md` gains the
+  finishing checklist. Prompt v1.11; synced into SYSTEM-PROMPT.md (mirror) and
+  the README copy-paste block.
+
 ## v1.10 — 2026-11-03
 - **Speed discipline (owner's rule: fast execution, no wasted time).** An audit
   found no explicit speed instructions anywhere in the repo — the rule lived

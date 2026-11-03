@@ -18,6 +18,13 @@ A documentary screenplay is not an essay with pictures. It is a film written in 
 8. **Narration discipline:** short sentences, one clause of new information each, written to the timing of the shots (about 2.2–2.5 words per second). No sentence may exist only to fill time between pictures.
 9. **Every line auditable:** in review, each AUDIO cell must answer “where exactly do I see this?” pointing at its VISUAL cell. No answer = rewrite.
 
+## Performance marks (directing the voice)
+The AUDIO column is a performance script, not just text:
+- `/` = a deliberate short pause (beat before a reveal or after a number).
+- **Bold** = the one emphasised word in the sentence; at most one per line — emphasis everywhere is emphasis nowhere.
+- The pack carries a **pronunciation list**: every proper name, company and number read aloud is checked against the TTS once; anything misread is respelled inside the spoken text (e.g. “Huff-man” if needed) with the correct spelling noted beside it. Mispronunciations are fixed at the chunk and re-generated, never left in.
+- Numbers are written to be spoken (“twenty-nine percent”, “eight hundred ninety-five million dollars”) so the voice and the on-screen graphic say the same thing at the same moment.
+
 ## Worked micro-example (Reddit rebuild style)
 - VISUAL: WS, dawn, a vast forum hall of glowing doorways; crowds stream through one huge open door. Slow crane down. AUDIO: “For twenty years, Reddit had two doors.”
 - VISUAL: MS tracking shot following one silhouette through the huge door as it passes a glowing signpost (no readable text). AUDIO: “Most people never used the front door. They arrived from somewhere else —"

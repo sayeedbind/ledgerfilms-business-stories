@@ -23,6 +23,7 @@ Translation rule: Filmcraft screenplay row → one pack entry: `[Image NA]` tagg
 5. **Proof segment gate** — build the first 60–90 seconds ONLY, export it, and get the user's rating before any full production. No exceptions after the 2026-11-03 rejection.
 6. **Full build** — only after the proof passes. Assemble with Fast Cut transitions OFF (VideoExpress has no dissolve; clean cuts), narration locked, coverage gate from PLAYBOOK §9 unchanged.
 7. **Editing pass (mandatory before export)** — per `references/editing.md`: topic check, angle audit (multi-angle cinema, no zoom-style motion), sync audit, sound audit, transitions audit, coverage re-check. The owner can invoke it any time with the words “Edit pass”.
+8. **Finishing (mandatory, after the edit pass)** — per `references/finishing.md`: score and designed effects mixed to ≈−14 LUFS under a directed, pronunciation-checked narration; grade shot-matched across the cut; corrected captions and chapters prepared; upload pack completed with the YouTube AI-content disclosure ticked (blocking); retention designed in (hook ≤5 s, pattern interrupt every ~20–30 s) and reviewed after publish, with the lesson written back into the stack.
 
 ## Blocking QC gates (a “no” stops the run)
 - **Correlation gate:** pick any 5 random narration lines. For each, can a viewer say what the line was about from the picture alone, muted? If any line fails, the screenplay goes back, not the render queue.
