@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.9 — 2026-11-03
+- **Professional editing standard + the EDIT PASS command (owner's directives).**
+  Story must follow the topic, cinematography must follow the script & voiceover,
+  and the film must be multi-angle cinema — never a single zoom-in/zoom-out style.
+  Filmcraft gains: `references/editing.md` (cut on the idea; every sequence
+  covered from ≥3 angles/sizes; ≥4 camera behaviours in any 10 shots; zoom
+  removed from the movement vocabulary — dolly/push or a cut to a closer size
+  instead; sound bridges; the six-step EDIT PASS), a topic-fidelity section in
+  story-structure.md (beat sheet states the topic's central question; off-topic
+  beats are cut), new blocking gates in SKILL.md (topic gate, camera-serves-the-
+  line rule, editing gate) and a mandatory editing pass as workflow step 7.
+  SYSTEM_PROMPT Step 1A now names the editing reference and the EDIT PASS —
+  which the owner can also invoke at any time with the words "Edit pass" — and
+  the fallback essentials carry the multi-angle rule. Prompt v1.9; synced into
+  SYSTEM-PROMPT.md (mirror) and the README copy-paste block.
+
 ## v1.8 — 2026-11-03
 - **The bound stack — fixes the slideshow failure.** The Reddit long-form was
   rejected by the owner: an essay script with thematic prompts matched afterwards

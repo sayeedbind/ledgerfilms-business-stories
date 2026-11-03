@@ -21,6 +21,7 @@ Eye-level (neutral truth), low angle (power, threat, scale), high angle (vulnera
 - **Handheld micro-movement** — urgency, documentary realism (use sparingly).
 - **Locked-off** — deadpan, bureaucracy, a door that does not open; stillness is a choice, say so.
 Movement must start and end on a composed frame, at one constant speed, and serve the line being spoken. “Camera slowly zooms and pans and rises” = reject and rewrite.
+**Zoom is not in the LedgerFilms movement vocabulary.** A zoom flattens the image and reads as a slideshow effect; achieve emphasis with a dolly/push-in (parallax, real depth) or a cut to a closer size. The single exception: one motivated in-shot zoom at a realisation beat, flagged in the screenplay as deliberate. Editor-side Zoom In filters and Fast Cut zoom transitions are banned outright (see editing.md).
 
 ## Light & grade (continuity tools)
 One motivated source per scene (window, desk lamp, screen glow), direction kept consistent when returning to a location. LedgerFilms grade: muted teal-and-amber, dramatic motivated light, shallow depth of field, film grain. Time-of-day is a story device: dawn = beginnings, noon = exposure, dusk = turns, night = consequences.

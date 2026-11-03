@@ -22,11 +22,14 @@ Translation rule: Filmcraft screenplay row → one pack entry: `[Image NA]` tagg
 4. **Motion graphics plan** — per `references/motion-graphics.md`: numbers, dates, quotes and mechanisms that cannot be filmed become planned graphics (figure builds, simple diagrams, document pushes), timed to the line that names them — never decoration.
 5. **Proof segment gate** — build the first 60–90 seconds ONLY, export it, and get the user's rating before any full production. No exceptions after the 2026-11-03 rejection.
 6. **Full build** — only after the proof passes. Assemble with Fast Cut transitions OFF (VideoExpress has no dissolve; clean cuts), narration locked, coverage gate from PLAYBOOK §9 unchanged.
+7. **Editing pass (mandatory before export)** — per `references/editing.md`: topic check, angle audit (multi-angle cinema, no zoom-style motion), sync audit, sound audit, transitions audit, coverage re-check. The owner can invoke it any time with the words “Edit pass”.
 
 ## Blocking QC gates (a “no” stops the run)
 - **Correlation gate:** pick any 5 random narration lines. For each, can a viewer say what the line was about from the picture alone, muted? If any line fails, the screenplay goes back, not the render queue.
 - **Continuity gate:** same character design, wardrobe, locations, props and colour grade across every shot that shares them; a shot that breaks continuity is regenerated, not shipped.
-- **Camera gate:** every shot names a size, an angle and exactly one motivated movement (or a deliberate locked-off). Two adjacent shots never repeat the same size+angle (the classic slideshow tell).
+- **Topic gate:** the beat sheet states the topic's central question; every sequence must visibly advance it. A sequence that serves only itself is cut, however good it looks.
+- **Camera gate:** every shot names a size, an angle and exactly one motivated movement (or a deliberate locked-off), and the [CAMERA] choice must be justified by that row's narration line — cinematography follows the script and voiceover, never decorates over them. Two adjacent shots never repeat the same size+angle (the classic slideshow tell).
+- **Editing gate:** every sequence is covered from ≥3 distinct angles/sizes; any 10 consecutive shots use ≥4 different camera behaviours; zoom-style motion (Zoom In filter, Fast Cut zoom, push-in as a default) is absent except a single motivated in-shot choice. Verified by the EDIT PASS in `references/editing.md` before export.
 - **Motif gate:** the visual motif appears in the hook, the turn and the payoff, changed each time (e.g. a door: open → closing → closed/locked open).
 - **Mute test:** the proof segment must make sense watched muted. **Audio-only test:** the narration must never describe something the picture contradicts or ignores.
 

@@ -2,6 +2,9 @@
 
 Business documentaries fail as stories when they list events. They work when a character/system with a goal meets an obstacle whose mechanism the audience watches operate.
 
+## Topic fidelity (owner's rule, 2026-11-03)
+The story follows the topic — not a genre template, not whatever footage is easy to generate. Before beats are written, the beat sheet states the topic's central question in one sentence (the Angle from intake). Every beat below must answer, complicate or pay off that question; a beat that could be transplanted into a different company's video unchanged is off-topic and is cut at the sheet stage, where cutting is cheap.
+
 ## Beat sheet (≈10 min, ~1,400–1,600 words)
 1. **Cold-open hook (0:00–0:30)** — the contradiction in one image + one line (“record quarter; worst day in its history”). No logos, no throat-clearing. Ends on an unanswered question.
 2. **The world before (0:30–2:00)** — origin told as scenes, not biography: a place, a person, a small first version of the machine. Establish the visual motif here.
