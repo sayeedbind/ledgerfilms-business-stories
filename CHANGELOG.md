@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.8 — 2026-11-03
+- **The bound stack — fixes the slideshow failure.** The Reddit long-form was
+  rejected by the owner: an essay script with thematic prompts matched afterwards
+  produced scenes with zero correlation to the narration (screenplay rated 1/10),
+  and the VideoExpress Scripting method had been used shallowly (single-shot
+  prompts; multi-shot, start-image-first and chaining mechanics unused). Now:
+  new `skills/ledgerfilms-filmcraft/` (creative law — two-column AV screenplay,
+  cinematography, story structure, motion graphics, VideoExpress capabilities
+  checked against the upstream scripting changelog v2.6.0, blocking QC gates,
+  proof-segment-first) and `skills/ledgerfilms-production-stack/` (the binding:
+  one mandatory load order — Playbook → Filmcraft → Scripting adaptation →
+  Production mechanics — a truthful STACK check line before any scripting or
+  generation, stop-and-report if a layer is missing, and a verbatim delegation
+  block for sub/browser agents). SYSTEM_PROMPT Step 1A rewritten from "install
+  and load the two skills" to "load the bound stack (all skills, no subset)";
+  prompt version bumped to v1.8; synced into SYSTEM-PROMPT.md (mirror) and the
+  README copy-paste block. Upstream scripting text remains linked, never copied
+  (CC BY-NC 4.0 — see LICENSE-NOTICES.md).
 ## v1.7 — 2026-10-31
 - **Scene length follows the voiceover.** The narration is split into **beats of
   ≤10 s** (≈ ≤25 words, one idea per beat, sentence boundaries); each scene's Manual
