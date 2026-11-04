@@ -52,3 +52,9 @@ no modern objects, no distorted hands.
 - **Multi-shot inside one generation:** distinct angles, explicit hard cuts, connected
   actions across cuts, same people/wardrobe/stage in every shot. Don't also ask for
   "one continuous shot" — the two instructions fight.
+- **Timings follow the voiceover (DURATION RULE):** the `[ACTION]` total and its
+  SHOT timings are **estimates derived from this clip's voiceover line** — allocate
+  seconds by the words that play in each shot (words ÷ ~2.4 per second), never a
+  fixed grid chosen before the line exists. The generated voiceover's actual
+  runtime overrides these numbers at the edit: cuts land where the voice actually
+  turns, not where the plan guessed.

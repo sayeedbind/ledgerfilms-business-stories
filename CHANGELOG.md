@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.14 — 2026-11-04
+- **The DURATION RULE, named and blocking (owner restated: “Mind it — video
+  duration depends on voiceover runtime”).** It was implicit in v1.13; now it is
+  stated as a rule in PLAYBOOK §6 (boxed, above the coverage math) and §7 (no
+  Manual Video Length on a narrated clip at all — its length is whatever its
+  voiceover runs), the SYSTEM_PROMPT/README fallback essentials, PROMPT_COMPACT,
+  the filmcraft capabilities reference, and the production-stack delegation
+  block. Consequences written down where fixed numbers could have overridden
+  the voice: `[ACTION]` totals and SHOT timings in the multishot format and the
+  prompt-pack template are estimates **derived from the clip's voiceover line**
+  (seconds allocated by the words in each shot; the generated runtime overrides
+  them at the edit); pacing no longer describes a generation as a fixed 8–12 s;
+  the storyboard's Planned s column is labelled a word-based voiceover estimate
+  that the actual runtime replaces. Prompt v1.14.
+
 ## v1.13 — 2026-11-04
 - **Voiceover is now made WITH each clip (owner directive, supersedes the v1.5
   standalone route).** The owner corrected the workflow: “You are making voiceover

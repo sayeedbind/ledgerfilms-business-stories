@@ -61,6 +61,10 @@ generate narration separately (no standalone Text-to-Speech chunks, no My AI Aud
 assets, no separate narration track). Size each line to the voiceover field (plan
 ≤~20 words / ≤120 characters per clip; split longer lines across two clips). A clip
 that is silent, truncated or wrong-voice does not count — regenerate that clip.
+DURATION RULE: video duration depends on voiceover runtime — never preset a
+narrated clip's length and never trim/speed its voiceover to fit a plan; the
+generated voiceover's actual runtime is the clip's length, and the clips' sum is
+the video's runtime.
 Clips are generated WITH their described production sound (transient, action-tied;
 no dialogue, no music in clips), low under the clip's voiceover — never silent
 video. Music only at assembly, low, ducked.

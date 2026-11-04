@@ -3,8 +3,11 @@
 From the mini-dramas playbook (fast-cut discipline), slowed one notch for documentary:
 
 ## Long-form
-- Visual beat every **~3–5 s**; a generation (multi-shot clip) covers 8–12 s with 2–3
-  internal hard-cut shots. ~60–75 generations per 10 minutes, with 15–20% motif/B-roll reuse.
+- Visual beat every **~3–5 s** inside a clip; a generation (multi-shot clip) carries
+  **one voiceover line**, with 2–3 internal hard-cut shots whose timings are
+  proportioned to the line's words (DURATION RULE: the clip lasts as long as its
+  voiceover runs — plan ~70 generations per 10 minutes at ~20 words per line, with
+  15–20% motif/B-roll reuse).
 - **Measured coverage rules everything (PLAYBOOK §6/§9):** every clip is generated
   **with its own voiceover**, so its measured duration IS its narration beat's
   duration — the scene follows the voiceover by construction. Keep a running total

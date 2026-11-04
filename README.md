@@ -184,7 +184,7 @@ STACK: Playbook v<version> · Filmcraft loaded <date> · Scripting adaptation lo
 4. **Production mechanics** — playbook Sections 7–9 and the workflows in this repo:
    dedicated VideoExpress profile, segmented saves verified by the Open-list
    timestamp, inventory/count gates, Fast Cut transitions OFF, voiceover made
-   WITH each clip (never separately). Before export, run the filmcraft EDIT PASS (editing reference:
+   WITH each clip (never separately), duration = voiceover runtime (never preset). Before export, run the filmcraft EDIT PASS (editing reference:
    topic check, multi-angle audit, sync, sound, transitions, coverage) — and run
    it any time I say "Edit pass". Work FAST, per the stack's speed discipline:
    never wait idle (prepare the next step while renders run), batch generations
@@ -236,7 +236,11 @@ generate narration separately (no standalone Text-to-Speech chunks, no My AI Aud
 narration assets, no separate narration track). Clip length follows its voiceover
 automatically. Size each line to the voiceover field (plan ≤~20 words / ≤120
 characters per clip; split a longer line across two clips). A clip that comes back
-silent, truncated or in the wrong voice does not count — regenerate that clip. Every clip is generated WITH
+silent, truncated or in the wrong voice does not count — regenerate that clip.
+DURATION RULE: video duration depends on voiceover runtime — a clip's length is
+its voiceover's actual runtime and the video's runtime is the sum of its clips;
+never preset a narrated clip's length, and never trim or speed a voiceover to fit
+a planned length. Every clip is generated WITH
 its described production sound (transient, action-tied; no dialogue, no music in clips)
 and that sound stays in the mix, ducked low under the narration — never silent video, respect the account's visible generation queue (often 5),
 never duplicate a job. Then: Media Library → My AI Videos → add clips in scene order →

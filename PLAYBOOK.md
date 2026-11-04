@@ -5,7 +5,7 @@ user message disagree, the user wins. When this file and an upstream playbook di
 this file wins — it is the LedgerFilms adaptation.
 
 **Channel:** LedgerFilmsHQ  
-**v1.13 change (2026-11-04, owner directive):** **voiceover is made WITH each clip** — every clip is generated from two fields in the VideoExpress generation dialog: the **video prompt** (the visual) and the **voiceover / audio prompt** (that clip's exact narration line, in the dialog's voiceover option, with the one locked channel voice). There is **no separate narration generation, no standalone Text-to-Speech chunks, and no separate narration track** (§§6–9). Clip length follows its voiceover playtime automatically. · **v1.7 change (2026-10-31):** **scene length follows the voiceover** — narration is split into ≤10 s beats and each clip is generated at its beat's measured duration (a 5 s line = a 5 s scene); scene count = beat count + ~10% B-roll (§6). · **v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
+**v1.14 change (2026-11-04, owner restated):** the **DURATION RULE** is now named and blocking — **video duration depends on voiceover runtime**: a clip's length is its voiceover's actual runtime, and the video's runtime is the sum of its clips' voiceovers. Never preset a narrated clip's length, never trim/speed a voiceover to fit a preset length, and derive any timed shot segments from the line's words (§§6–7). · **v1.13 change (2026-11-04, owner directive):** **voiceover is made WITH each clip** — every clip is generated from two fields in the VideoExpress generation dialog: the **video prompt** (the visual) and the **voiceover / audio prompt** (that clip's exact narration line, in the dialog's voiceover option, with the one locked channel voice). There is **no separate narration generation, no standalone Text-to-Speech chunks, and no separate narration track** (§§6–9). Clip length follows its voiceover playtime automatically. · **v1.7 change (2026-10-31):** **scene length follows the voiceover** — narration is split into ≤10 s beats and each clip is generated at its beat's measured duration (a 5 s line = a 5 s scene); scene count = beat count + ~10% B-roll (§6). · **v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
 **Formats:** Long-form ~10:00, 16:9 · Shorts 45–60 s, 9:16 · Nothing else. Never 1:1.
 **Look:** cinematic AI art (photoreal-cinematic), faceless, narration-led.
 
@@ -156,6 +156,15 @@ The blocking failure this prevents: picture that runs out before the narration d
 should never have been made). **Planned scene counts mean nothing; only measured
 seconds count.**
 
+> **DURATION RULE (owner, restated 2026-11-04): video duration depends on voiceover runtime.** Per clip and for the whole video: the voiceover's runtime comes
+> first and the picture follows it. A planned duration is only a word-based
+> estimate (words ÷ ~150 wpm) until the clip is generated; the generated
+> voiceover's **actual** runtime is the clip's length, final. Never choose a clip
+> length first and squeeze the line into it, never set a manual length on a
+> narrated clip, and never trim, speed or pad a clip's voiceover to hit a planned
+> number — if picture and voice disagree, the voice wins and the picture is
+> re-timed or the clip regenerated.
+
 1. **Estimate, then measure.** Before generation, estimate narration seconds from the
    script (words ÷ ~150 wpm × 60 for planning). That estimate is for planning only:
    under the per-clip voiceover route (§§7–8) there is no separate narration file to
@@ -193,9 +202,9 @@ seconds count.**
    narration separately** — no standalone Import Media → Text to Speech chunks, no
    My AI Audio assets, no separate narration track at assembly. Because the voice is
    generated with the picture, **clip length follows the voiceover playtime
-   automatically**: do not set a Manual Video Length that truncates the line; if a
-   length control is shown, leave the clip to follow its voiceover and **measure the
-   finished clip** (picture + voice together). The old standalone route's failure
+   automatically** (the DURATION RULE, §6): **do not set Manual Video Length on a
+   narrated clip at all** — its length is whatever its voiceover runs; **measure
+   the finished clip** (picture + voice together) and record that as its duration. The old standalone route's failure
    modes — chunk ordering, a narration track displaced past the picture (Anthropic
    export, 2026-11-03) — are designed out by this route. Historical note: Advanced
    Mode ON is still required **only** if a silent / B-roll clip's length must be

@@ -5,7 +5,9 @@ Each generation **is** its narration beat (PLAYBOOK §6): split the screenplay i
 ≤10 s beats sized to the dialog's voiceover field (plan ≤~20 words / ≤120 characters
 per clip) — **one beat = one clip = one voiceover line**, entered in the generation
 dialog's voiceover / audio field with the locked voice. The clip's length follows
-its voiceover; record its measured duration after generation.
+its voiceover; the Planned s column is a word-based estimate of that voiceover
+(words ÷ ~150 wpm) — the generated voiceover's actual runtime replaces it
+(DURATION RULE); record the measured duration after generation.
 
 **Coverage header — fill before generation, update while generating:**
 Estimated narration: ___ s · Narration beats (one per clip) = ___ ·
