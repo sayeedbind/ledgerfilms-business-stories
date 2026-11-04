@@ -21,13 +21,13 @@ This skill is the router and the always-on rules.
 | Bible, masters, locations | `references/bible-and-continuity.md` |
 | Writing any prompt | `references/multishot-prompt-format.md` |
 | Operating VideoExpress | `references/videoexpress-ui-map.md` |
-| Narration, voices, music | `references/narration-and-sound.md` |
+| Narration (per-clip voiceover), voices, music | `references/narration-and-sound.md` |
 | Pacing, trim, export gate | `references/pacing-and-trim.md` · `references/fact-check-qc.md` |
 
 ## Always-on rules
 1. **No invented facts.** Two sources per load-bearing fact, one primary where possible.
 2. **Bible blocks verbatim** in every prompt. Paraphrase is drift.
-3. **Narration locked once generated** — cut picture to voice, never voice to picture.
+3. **Voiceover made WITH each clip** — that clip's line goes in the generation dialog's voiceover field, locked voice; never generate narration separately, never build a separate narration track. A bad read = regenerate that clip.
 4. Ratio re-checked **inside the generation dialog**; auto-enhance OFF; gallery OFF; no music in clips.
 5. Quotes mean speech — quote nothing in visual prompts; narration carries all words.
 6. Never ask the model to render text, logos, charts or numbers — overlays do that later.

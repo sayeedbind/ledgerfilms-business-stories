@@ -24,13 +24,15 @@ reuse completed assets when resuming; cut only the excess video at the narration
 **Changed:** watercolor-and-ink → cinematic photoreal house style; presenter intro
 (≥20 s, Daniel Reed) → **dropped as default** (LedgerFilms is faceless; presenter is an
 optional variant in the bible template); 60 s–5 min duration → ~10 min long-form;
-CloneVoice standalone route → VideoExpress in-app narration route (from repo 3).
+CloneVoice standalone route → VideoExpress in-app narration route (from repo 3) → per-clip voiceover in the generation dialog (owner, 2026-11-04).
 
 ## 3. ai-playbooks/videoexpress-stickman-story-agent — narration & continuity ops
-**Kept (revised 2026-10-30):** narration is created in VideoExpress, but via the
-standalone Import Media → Text to Speech route in ≤1,000-character chunks — the
-Narration Video dialog route from the stickman agent proved unusable for long
-voice-overs (120-character cap, replace-per-import); design the whole sequence before generating (incoming →
+**Kept (revised 2026-10-30, superseded 2026-11-04):** narration is created in
+VideoExpress. The 2026-10-30 revision used the standalone Import Media → Text to
+Speech route in ≤1,000-character chunks; **the owner replaced that route on
+2026-11-04**: voiceover is now made **with each clip** from the generation dialog's
+voiceover / audio option (that clip's line, locked voice) — no separate narration
+generation or track (PLAYBOOK §8, CHANGELOG v1.13); design the whole sequence before generating (incoming →
 action → outgoing → next-opening states); fresh start images from the master rather than
 last-frame chaining by default; fixed location layouts with counts/positions that must not
 drift; concurrent-slot discipline (often 5, full queue = wait, never duplicate); max

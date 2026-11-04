@@ -16,7 +16,7 @@ Editing is where the screenplay becomes cinema or collapses into a slideshow. Th
 
 ## Rhythm & sound
 - Shot length follows the narration beat (PLAYBOOK §6/v1.7 scene-length rule); the average tightens at the turn, breathes at the lesson. No shot outstays the line it illustrates — trim at the line's end, extend only with the next beat's own shot.
-- Narration is continuous and locked; picture cuts happen under it (the visual may lead a cut by a few frames so eye and ear land together). Clip production sound stays ducked low under narration; sound bridges (a door slam, a crowd swell) may cross a cut to glue two angles of one space.
+- Narration is continuous because every clip carries its own voiceover; picture cuts happen at clip boundaries under the voice (the visual may lead a cut by a few frames so eye and ear land together). Never trim through a spoken line. Clip production sound stays low under that clip's voiceover; sound bridges (a door slam, a crowd swell) may cross a cut to glue two angles of one space.
 - Graphics enter by build/reveal, hold for reading time, exit clean (filmcraft motion-graphics rules). No effect transitions between scenes: clean cuts, with a fade reserved for time-passage or the ending only.
 
 ## The EDIT PASS command
@@ -24,7 +24,7 @@ When the owner says **“Edit pass”** — or before ANY export — the agent r
 1. Topic check: state the topic question; confirm every sequence advances it; name any that doesn't (cut/regenerate list).
 2. Angle audit: list size+angle+movement for every shot; flag adjacent repeats, single-angle sequences, movement-variety failures, and any zoom-style motion (remove/replace it).
 3. Sync audit: 5 random lines, muted-picture test; picture leads cuts by a few frames; no shot outstays its line.
-4. Sound audit: narration locked and continuous; clip sound ducked; bridges where used are intentional.
+4. Sound audit: every clip's own voiceover present, locked voice, complete and continuous across cuts; clip production sound low; bridges where used are intentional.
 5. Transitions audit: Fast Cut OFF, Zoom In filter OFF, fades only where this standard allows.
 6. Coverage gate (PLAYBOOK §9) re-checked after any trim the pass made.
 Only when all six pass does the agent save (verified by Open-list timestamp) and export.

@@ -22,7 +22,7 @@ A documentary screenplay is not an essay with pictures. It is a film written in 
 The AUDIO column is a performance script, not just text:
 - `/` = a deliberate short pause (beat before a reveal or after a number).
 - **Bold** = the one emphasised word in the sentence; at most one per line — emphasis everywhere is emphasis nowhere.
-- The pack carries a **pronunciation list**: every proper name, company and number read aloud is checked against the TTS once; anything misread is respelled inside the spoken text (e.g. “Huff-man” if needed) with the correct spelling noted beside it. Mispronunciations are fixed at the chunk and re-generated, never left in.
+- The pack carries a **pronunciation list**: every proper name, company and number read aloud is checked on the generated clips once; anything misread is respelled inside that clip's voiceover text (e.g. “Huff-man” if needed) with the correct spelling noted beside it. Mispronunciations are fixed by regenerating **that clip** with the respelled voiceover text, never left in.
 - Numbers are written to be spoken (“twenty-nine percent”, “eight hundred ninety-five million dollars”) so the voice and the on-screen graphic say the same thing at the same moment.
 
 ## Worked micro-example (Reddit rebuild style)

@@ -18,16 +18,17 @@ ALL boxes must pass — or the failure is disclosed to the user with the export.
 - [ ] Style line present in every prompt; grade consistent across clips
 
 **Sound**
-- [ ] Channel narrator, locked take, starts at frame 1 (long-form) with no gap
-- [ ] Clip production sound ducked low under narration (clips generated WITH described sound, never silent); music only the assembly track, ducked
+- [ ] **Every clip generated WITH its own voiceover** (dialog voiceover option, locked channel voice + settings) — no separate narration track exists
+- [ ] Each clip's voiceover checked: present, complete, correct line, no truncation; first clip's voiceover starts at frame 1 (long-form) with no gap
+- [ ] Clip production sound low under the clip's voiceover (clips generated WITH described sound, never silent); music only the assembly track, ducked
 - [ ] No invented dialogue from any character
 
 **Edit & export**
 - [ ] Clips in planned order, no duplicates, Auto Align done, dead-air trim passed at 1×
-- [ ] **COVERAGE GATE (blocking): measured video total ___ s ≥ measured narration
-      total ___ s − 2 s. Clips generated at their narration beat's measured length
-      (max 10 s); scene count = narration beats + ~10%
-      + ~10%. If this fails: STOP, no export — generate more coverage (PLAYBOOK §6/§9)**
+- [ ] **COVERAGE GATE (blocking): every planned beat has its clip, in order; every
+      clip carries its checked voiceover; summed measured clip total ___ s lands in
+      the format's runtime range. If this fails: STOP, no export — generate the
+      missing/failed clips with their voiceovers (PLAYBOOK §6/§9)**
 - [ ] Runtime: long-form 9–11 min from narration · Short 45–60 s
 - [ ] Export verified in My Videos at High/FullHD, correct ratio, downloaded/archived
 - [ ] Upload pack delivered: 3 titles (pick marked), description + sources + disclaimer,

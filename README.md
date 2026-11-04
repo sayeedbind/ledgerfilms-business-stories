@@ -183,8 +183,8 @@ STACK: Playbook v<version> · Filmcraft loaded <date> · Scripting adaptation lo
 
 4. **Production mechanics** — playbook Sections 7–9 and the workflows in this repo:
    dedicated VideoExpress profile, segmented saves verified by the Open-list
-   timestamp, inventory/count gates, Fast Cut transitions OFF, narration locked
-   once generated. Before export, run the filmcraft EDIT PASS (editing reference:
+   timestamp, inventory/count gates, Fast Cut transitions OFF, voiceover made
+   WITH each clip (never separately). Before export, run the filmcraft EDIT PASS (editing reference:
    topic check, multi-angle audit, sync, sound, transitions, coverage) — and run
    it any time I say "Edit pass". Work FAST, per the stack's speed discipline:
    never wait idle (prepare the next step while renders run), batch generations
@@ -202,7 +202,7 @@ pass (timeliness + the phrases viewers are searching); start at the playbook's
 Section 2 right after and go: research and two-source fact-check, write the
 two-column AV screenplay and build the bible and prompt pack using the bound
 stack from Step 1A,
-generate, lock the narration, trim the dead air and export, without stopping to
+generate each clip with its voiceover on it, trim the dead air and export, without stopping to
 present each step. Come back to me only if:
 - I need to sign in (VideoExpress or GitHub), accept VideoExpress's one-time Terms
   screen, or top up credits / upgrade;
@@ -228,9 +228,15 @@ light, muted teal-and-amber grade, shallow depth, film grain, no text, no waterm
 Never ask the image model to render real logos, charts or readable text. In VideoExpress:
 Image Type "Photorealistic (Cinematic)", Creative mode OFF, "Automatically enhance my
 video prompt" OFF, public gallery OFF, and re-check the ratio in the generation dialog
-itself (it resets). Narration route: Narration Video → Create Video → one channel voice →
-create audio → generate video. Generate the narration once and lock it — it sets the final
-runtime; cut the picture to the voice, never the reverse. Every clip is generated WITH
+itself (it resets). Narration route: PER-CLIP voiceover — in the generation dialog,
+every clip has a video prompt and a voiceover / audio prompt: put the visual in the
+video prompt and that clip's exact narration line in the voiceover field, with the one
+locked channel voice selected, and generate the clip with its voiceover on it. NEVER
+generate narration separately (no standalone Text-to-Speech chunks, no My AI Audio
+narration assets, no separate narration track). Clip length follows its voiceover
+automatically. Size each line to the voiceover field (plan ≤~20 words / ≤120
+characters per clip; split a longer line across two clips). A clip that comes back
+silent, truncated or in the wrong voice does not count — regenerate that clip. Every clip is generated WITH
 its described production sound (transient, action-tied; no dialogue, no music in clips)
 and that sound stays in the mix, ducked low under the narration — never silent video, respect the account's visible generation queue (often 5),
 never duplicate a job. Then: Media Library → My AI Videos → add clips in scene order →
@@ -240,11 +246,11 @@ generations to the visible queue limit, verify only at segment checkpoints.
 EDIT PASS: story serves the topic question; camera serves the narration line;
 multi-angle cinema — every sequence from at least 3 angles/sizes, no adjacent
 shots repeating size+angle, no zoom-style motion or zoom transitions →
-CHECK COVERAGE before saving/exporting: scenes follow the voiceover — split the
-script into ≤10 s narration beats (≈ ≤25 words) and generate each clip at its beat's
-measured length (a 5 s line = a 5 s scene, max 10 s); scene count = beats + ~10%
-B-roll, and the measured video total must be ≥ the measured narration total − 2 s —
-if it is short, generate more clips and reassemble; never export an under-covered video → Save → Export Video (High / FullHD / mp4 — 1920×1080 long-form, 1080×1920 Shorts) → verify the
+CHECK COVERAGE before saving/exporting: every planned beat has its clip, in order;
+every clip carries its own voiceover (present, locked voice, complete, matching its
+line); and the summed measured clip durations land in the format's runtime range —
+if a beat is missing or a clip is silent/wrong, generate that clip (with its
+voiceover) and reassemble; never export an under-covered video → Save → Export Video (High / FullHD / mp4 — 1920×1080 long-form, 1080×1920 Shorts) → verify the
 export exists in My Videos → send me the download link, 3 title options, a description
 with sources, tags, a pinned comment, a thumbnail brief, a corrected captions
 file, the finished upload pack with the YouTube AI-content disclosure ticked, and
@@ -268,7 +274,7 @@ Sources:
 | Structure | Hook → stakes → origin → mechanism → turning point → fall/climax → lesson | Hook (0–3 s) → setup → escalation → **reveal at ~70%** → loop/CTA |
 | Visuals | 60–75 clips, multi-shot generations, ~4 s per visual beat | 10–14 clips, ~3 s per shot |
 | Bible | Founder + company + era + location blocks, pasted verbatim in every prompt | Same bible, vertical-safe framing (subject centre-frame) |
-| Narration | One narrator, generated first; **narration sets the final runtime** | Same narrator, same settings |
+| Narration | **Per-clip voiceover:** each clip's line is entered in the generation dialog's voiceover option and generated with the clip; clip length follows the voiceover; no separate narration track | Same route, same narrator, same settings |
 | Edit | Clips on track 1, Auto Align, every frozen/silent head & tail cut | Same, tighter: no shot outlives its line |
 | Export | High / FullHD 1920×1080 / MP4 | High / FullHD 1080×1920 / MP4 |
 
@@ -296,8 +302,10 @@ Sources:
 1. **No invented numbers.** Every revenue figure, date, valuation and quote needs two sources,
    one of them primary where possible (filing, earnings call, court record, company report).
    Unverifiable = cut or flagged to you, never narrated as fact. See [`docs/fact-check-and-legal.md`](docs/fact-check-and-legal.md).
-2. **Narration first, picture second.** The locked narration sets the runtime. Never speed up,
-   chop or re-generate narration to hit an exact minute count.
+2. **Voiceover with the picture, never separate.** Each clip is generated with its own
+   voiceover line on it (locked channel voice). Never generate a separate narration
+   track, and never speed up, chop or swap a clip's voiceover to hit a minute count —
+   a bad read is fixed by regenerating that one clip.
 3. **One narrator, one look.** Same voice, same cinematic art direction, same bible blocks —
    verbatim — in every clip of a video, and the same narrator across the channel.
 4. **Auto-enhance OFF, public gallery OFF, no music baked into clips.** Music is added once,

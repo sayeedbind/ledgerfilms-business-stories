@@ -45,29 +45,35 @@ camera locked unless a named move with a destination; plan each clip's incoming 
 action → outgoing → next-opening states. Start from a fresh start image at closest
 framing; chain only when framing matches.
 
-GENERATE: image first, then video. Image Type Photorealistic (Cinematic), Creative mode
+GENERATE: image first, then video — with that clip's voiceover text in the dialog's
+voiceover / audio field (see NARRATION). Image Type Photorealistic (Cinematic), Creative mode
 OFF, auto-enhance OFF, public gallery OFF, no music in clips. Re-check the ratio inside
 the generation dialog every time (it resets). Submit in scene order up to the account's
 parallel limit (often 5); a full queue means wait, never duplicate. Max 3 attempts per
 clip, one variable changed per retry.
 
-NARRATION: one channel narrator (system voice by default; cloned only with permission),
-built via Import Media → Text to Speech in ≤1,000-character sentence-boundary chunks
-(the dialog's Narration Video flow caps at 120 characters — unusable for long voice-over);
-each import saves a My AI Audio asset labelled by its opening words. Generated ONCE and
-locked — the measured chunk-duration total sets the runtime. Clips are generated WITH
-their described production sound (transient, action-tied; no dialogue, no music in
-clips) and that sound stays in the mix, ducked low under the narration — never silent
+NARRATION — PER-CLIP VOICEOVER (never separate): one channel narrator (system voice
+by default; cloned only with permission). In the generation dialog every clip has a
+video prompt and a voiceover / audio prompt: visual in the video prompt, that clip's
+exact narration line in the voiceover field, locked voice selected, generate — the
+clip returns with its voiceover on it and its length follows the voiceover. NEVER
+generate narration separately (no standalone Text-to-Speech chunks, no My AI Audio
+assets, no separate narration track). Size each line to the voiceover field (plan
+≤~20 words / ≤120 characters per clip; split longer lines across two clips). A clip
+that is silent, truncated or wrong-voice does not count — regenerate that clip.
+Clips are generated WITH their described production sound (transient, action-tied;
+no dialogue, no music in clips), low under the clip's voiceover — never silent
 video. Music only at assembly, low, ducked.
 
-EDIT & EXPORT: timeline in scene order, verify each clip lands, Auto Align, then cut
-every frozen/silent head and tail and close gaps (Shorts: no shot outlives its line).
-Overrun: cut only the excess video at the narration's right edge — never speed or chop
-narration. UNDERRUN IS BLOCKING: scenes follow the voiceover — split the script into
-≤10 s narration beats (≈ ≤25 words) and generate each clip at its beat's measured
-length (a 5 s line = a 5 s scene, max 10 s); scene count = beats + ~10% B-roll; if the
-measured video total < measured narration total − 2 s, STOP —
-generate more clips and reassemble, never export under-covered. Export High/FullHD MP4 — 1920×1080 long-form, 1080×1920 Shorts — and verify
+EDIT & EXPORT: timeline in scene order (clip order = narration order; there is no
+separate narration track), verify each clip lands, Auto Align, then cut every
+frozen/silent head and tail that carries no voiceover and close gaps (Shorts: no
+shot outlives its line). Never trim through a spoken line, never speed or chop a
+clip's voiceover. COVERAGE IS BLOCKING: every planned beat has its clip; every clip
+carries its voiceover (present, locked voice, complete, matching its line); summed
+measured clip durations land in the format's runtime range — if a beat is missing
+or a clip fails the voice check, STOP, generate that clip and reassemble, never
+export under-covered. Export High/FullHD MP4 — 1920×1080 long-form, 1080×1920 Shorts — and verify
 the export exists.
 
 DELIVER in one message: download link, 3 titles (your pick marked), description with

@@ -32,8 +32,12 @@ no modern objects, no distorted hands.
   place them left/right, name the exact objects. Delete decorative nouns.
 - **Positives except in [NEGATIVES].** Everywhere else, state what IS there and what
   stays still. Only [NEGATIVES] may exclude, each item starting "No".
-- **Quotation marks = speech.** Quote nothing — narration is layered separately, and a
-  stray quote will make a character "speak" it.
+- **Quotation marks = speech.** Quote nothing in the video prompt — a stray quote
+  will make a character "speak" it. The clip's narration is **not** part of the
+  video prompt at all: it goes, unquoted and verbatim, into the generation dialog's
+  **voiceover / audio field** for that clip (one line per clip, locked voice —
+  PLAYBOOK §8). The pack records it per clip as a `[VOICEOVER]` line under the
+  video prompt so both fields can be pasted without hunting through the script.
 - **Bible blocks verbatim**, including in start-image prompts (which start `[Image 07A]`).
   When an accepted start image improves on the bible's wording, update the bible to the
   image's wording once, then stay verbatim with the new version.

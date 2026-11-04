@@ -1,5 +1,29 @@
 # Changelog
 
+## v1.13 — 2026-11-04
+- **Voiceover is now made WITH each clip (owner directive, supersedes the v1.5
+  standalone route).** The owner corrected the workflow: “You are making voiceover
+  separately. I want you to make voiceover with each clip from the voiceover
+  option” — in VideoExpress every generation shows a **video prompt** and an
+  **audio / voiceover prompt** for that clip. Now: the visual goes in the video
+  prompt, that clip's exact AUDIO line goes in the voiceover field with the locked
+  channel voice (Emotion Andrew Multilingual, speed 1, pitch 0), and the clip is
+  generated with its voiceover on it — **clip length follows the voiceover
+  automatically**. Retired everywhere: standalone Import Media → Text to Speech
+  chunks (≤1,000 chars), My AI Audio narration assets, the separate narration
+  track, chunk ordering, and measuring a separate narration total. Beats are sized
+  to the voiceover field (plan ≤~20 words / ≤120 characters per clip, verify the
+  dialog's current limit on the first clip, split longer lines across two beats).
+  The §9 gate is rewritten as count + voice-per-clip + runtime-range: a clip that
+  is silent, truncated, wrong-voice or wrong-line does not count and is
+  regenerated. This designs out the Anthropic failure (voiceover displaced past
+  the picture on a separate track). Synced across PLAYBOOK §§6–9, SYSTEM_PROMPT /
+  SYSTEM-PROMPT / README / PROMPT_COMPACT, both workflows, the business-stories
+  skill + its narration / UI-map / pacing / QC / multishot references, filmcraft
+  (SKILL, capabilities, screenplay, finishing, editing), the production-stack
+  delegation block, storyboard / prompt-pack / QC templates, troubleshooting and
+  source-map. Prompt v1.13.
+
 ## v1.12 — 2026-11-03
 - **Owner correction from the Anthropic run, written into the rules:** the Manual
   Video Length control exists **only with Advanced Mode ticked ON** — with it off,

@@ -10,7 +10,7 @@ upload day, not work days.
 | Script (long-form) | 2.0 h | 1,350–1,500 words, re-hooks, lesson ending |
 | Bible + prompt pack | 1.5 h | Master images, bible blocks, 60–75 clip prompts |
 | Generation (long-form) | 3.0 h | Queued in batches of ≤5; prepare Shorts scripts while rendering |
-| Narration, edit, trim, overlays | 2.0 h | Locked narration, dead-air trim, number overlays, export |
+| Edit, trim, overlays (voiceover is generated with each clip — no separate narration step) | 2.0 h | Per-clip voiceover checked, dead-air trim, number overlays, export |
 | Titles, thumbnail, metadata | 1.0 h | 3 titles, thumbnail brief + build, description, pinned comment |
 | Shorts production | 3.0 h | 4 × ~45 min — 2 cut-downs from the long-form, 2 standalone teasers |
 | Publishing & community | 0.5 h | Uploads, pinned comments, first-60-minutes replies (spread across the week) |
@@ -20,7 +20,7 @@ upload day, not work days.
 - **Mon:** research + script. (Evening: publish Short 1 — standalone teaser made last week.)
 - **Tue:** bible + prompt pack, start generation. **Publish long-form 9–10 AM** only if it
   was finished the prior week — run one week ahead; a same-week turnaround is how quality dies.
-- **Wed:** generation + narration + edit. (Evening: Short 2 — cut-down of last week's long-form.)
+- **Wed:** generation (each clip with its voiceover) + edit. (Evening: Short 2 — cut-down of last week's long-form.)
 - **Thu:** finish edit, thumbnail, metadata, schedule uploads. (Evening: Short 3.)
 - **Fri:** make next week's 2 standalone Shorts. (Evening: Short 4.) Buffer: anything that
   slipped lands here, not on the weekend.

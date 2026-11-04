@@ -26,7 +26,7 @@
 - **Music licence logged:** ☐ track/source:
 - **Finishing (filmcraft `references/finishing.md`):**
   - Score/SFX mixed under narration, loudness ≈ −14 LUFS, peak ≤ −1 dBTP: ☐
-  - Narration performance checked in full (pauses/emphasis; pronunciation list cleared): ☐
+  - Narration performance checked in full — every clip's own voiceover listened to in order (pauses/emphasis; pronunciation list cleared): ☐
   - Grade shot-matched across the cut; no black/frozen frames (contact-sheet sweep): ☐
   - Captions: corrected SRT attached (long-form) / burned-in (Shorts): ☐
   - **YouTube AI-content disclosure ticked at upload (blocking):** ☐

@@ -5,7 +5,7 @@ user message disagree, the user wins. When this file and an upstream playbook di
 this file wins — it is the LedgerFilms adaptation.
 
 **Channel:** LedgerFilmsHQ  
-**v1.7 change (2026-10-31):** **scene length follows the voiceover** — narration is split into ≤10 s beats and each clip is generated at its beat's measured duration (a 5 s line = a 5 s scene); scene count = beat count + ~10% B-roll (§6). · **v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
+**v1.13 change (2026-11-04, owner directive):** **voiceover is made WITH each clip** — every clip is generated from two fields in the VideoExpress generation dialog: the **video prompt** (the visual) and the **voiceover / audio prompt** (that clip's exact narration line, in the dialog's voiceover option, with the one locked channel voice). There is **no separate narration generation, no standalone Text-to-Speech chunks, and no separate narration track** (§§6–9). Clip length follows its voiceover playtime automatically. · **v1.7 change (2026-10-31):** **scene length follows the voiceover** — narration is split into ≤10 s beats and each clip is generated at its beat's measured duration (a 5 s line = a 5 s scene); scene count = beat count + ~10% B-roll (§6). · **v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
 **Formats:** Long-form ~10:00, 16:9 · Shorts 45–60 s, 9:16 · Nothing else. Never 1:1.
 **Look:** cinematic AI art (photoreal-cinematic), faceless, narration-led.
 
@@ -137,8 +137,10 @@ Per generation: `[REFERENCE USE] [IDENTITY / CONTINUITY] [SCENE] [ACTION] [CAMER
   prompts concrete, countable, and free of stray objects.
 - **Positives everywhere except [NEGATIVES]** — the engine reads "no X" outside [NEGATIVES]
   as "include X". Exclusions live only in [NEGATIVES], each starting "No".
-- Quotation marks mean **speech**. Our narration is added as narration, so quote nothing in
-  visual prompts and keep mouths closed/turned in scenes — no invented dialogue.
+- Quotation marks mean **speech**. Quote nothing in **visual** prompts and keep mouths
+  closed/turned in scenes — no invented dialogue. The narration itself is never
+  quoted into the video prompt: it goes, unquoted and verbatim, into the clip's
+  **voiceover field** (§§7–8).
 - Camera: locked unless the move serves the beat; every move named and given a destination;
   never return to space that has left the frame.
 - Plan **continuity handoffs**: for each clip record incoming state → action → outgoing
@@ -155,116 +157,138 @@ should never have been made). **Planned scene counts mean nothing; only measured
 seconds count.**
 
 1. **Estimate, then measure.** Before generation, estimate narration seconds from the
-   script (words ÷ ~150 wpm × 60 for planning). After narration is generated (§8),
-   replace the estimate with its **measured** duration — that number is the coverage
-   target, and it is final.
-2. **Clip length = its voiceover beat's length (max 10 s).** Split the narration into
-   **beats of ≤10 s of spoken narration** (≈ ≤25 words at 145 wpm — one idea per beat,
-   cut at sentence boundaries). Each scene's Manual Video Length is set to that beat's
-   narration duration: a 5 s line gets a 5 s scene, a 10 s line a 10 s scene. After
-   the narration exists, replace each beat's word-count estimate with its **measured**
-   audio duration. A route that silently returns ~5 s clips does not satisfy a plan
-   written for measured beat lengths — re-plan at the measured length.
-3. **Scene count formula:** scenes = **number of narration beats** after splitting
-   the script into ≤10 s segments (≈ ≤25 words each), plus a ~10% safety margin of
-   extra B-roll / motif generations. Quick check: ⌈ narration seconds ÷ 10 ⌉ is the
-   floor (600 s → ≥60 beats, plan ~66); a script with many short punch lines yields
-   more, shorter scenes. Because each scene is generated at its beat's measured
-   length, scene seconds sum to the narration total by construction — the B-roll
-   margin covers trims. A 30-scene plan can only ever cover ~4:00–5:00 — never
-   promise it covers a long-form.
+   script (words ÷ ~150 wpm × 60 for planning). That estimate is for planning only:
+   under the per-clip voiceover route (§§7–8) there is no separate narration file to
+   measure — each finished clip's **measured duration is its voiceover's duration**,
+   and the sum of clip durations is the runtime.
+2. **One beat = one clip = one voiceover line.** Split the screenplay into **beats of
+   ≤10 s of spoken narration** (one idea per beat, cut at sentence boundaries), and
+   size every beat to **fit the generation dialog's voiceover field**: plan
+   **≤~20 words / ≤120 characters per clip** until the first generation of the run
+   confirms the field's current limit in the dialog, then never exceed the smaller
+   of (that limit, ~25 words / 10 s). A line that does not fit is split into two
+   beats with two shots — never pasted into a separate TTS tool, never truncated.
+3. **Scene count formula:** scenes = **number of narration beats**, plus a ~10%
+   safety margin of extra B-roll / motif generations — and every B-roll clip that
+   plays under a spoken line carries that line's voiceover too; a truly silent
+   B-roll clip is planned as such and counted as picture only. Quick check: a
+   1,400-word long-form at ~20 words per beat is ~70 beats, plan ~77 generations.
+   A 30-scene plan can only ever cover ~4:00–5:00 — never promise it covers a
+   long-form.
 4. **Running total while generating:** record every finished clip's **measured**
-   duration in the storyboard and keep a running footage total. Stop generating only
-   when the measured total ≥ the narration target. If it falls short, generate
-   additional on-topic B-roll / alternate-angle clips for the beats that are short —
-   never stretch, slow, freeze, loop or pad a clip to fake coverage.
+   duration in the storyboard and keep a running total — that total is picture and
+   narration together, by construction. Stop generating only when every beat has
+   its clip and the total lands in the format's runtime range. If it falls short,
+   the missing beats are generated — never stretch, slow, freeze, loop or pad a
+   clip to fake coverage.
 
 ## 7. Generation in VideoExpress
 
-1. **Route:** Long-form/Shorts are narration-led: build scenes as image → video, and the
-   voice via the **standalone Text-to-Speech route — Import Media → Text to Speech**
-   (field-tested 2026-10-30: the generation dialog's "Narration Video" flow caps its text
-   box at 120 characters and each import replaces the pending audio — it cannot build a
-   10-minute voice-over; details in §8). **Advanced Mode ON whenever a clip's length
-   must be controlled** — the Manual Video Length control only appears with Advanced
-   Mode ticked (owner-confirmed 2026-11-03; with it off, the dialog shows no length
-   control and clips default to ~5 s, which failed the §9 gate on the Anthropic run).
-   Keep automatic enhancement OFF and set Manual Video Length to the beat's measured
-   narration seconds. (Separate route, owner-confirmed: when a clip's voiceover is
-   generated *with* the video, its length follows the voiceover playtime automatically.)
+1. **Route — voiceover WITH each clip (owner directive, 2026-11-04):** every clip is
+   generated in the dialog from **two fields**: (a) the **video prompt** — the visual
+   prompt only; and (b) the **voiceover / audio option** — that clip's exact AUDIO
+   (narration) line, entered as the clip's voiceover text, with the locked channel
+   voice + settings selected in the dialog **before** generating. Generate the audio
+   with the video for that clip, every clip, no exceptions. **Never generate the
+   narration separately** — no standalone Import Media → Text to Speech chunks, no
+   My AI Audio assets, no separate narration track at assembly. Because the voice is
+   generated with the picture, **clip length follows the voiceover playtime
+   automatically**: do not set a Manual Video Length that truncates the line; if a
+   length control is shown, leave the clip to follow its voiceover and **measure the
+   finished clip** (picture + voice together). The old standalone route's failure
+   modes — chunk ordering, a narration track displaced past the picture (Anthropic
+   export, 2026-11-03) — are designed out by this route. Historical note: Advanced
+   Mode ON is still required **only** if a silent / B-roll clip's length must be
+   controlled manually (the length control appears only with Advanced Mode ticked,
+   owner-confirmed 2026-11-03); keep automatic enhancement OFF.
 2. **Style routing:** channel look = Image Type **Photorealistic (Cinematic)**, Creative
    mode **off**, style line (§5) carried in the prompt text instead.
 3. **Re-check settings in the generation dialog itself** before every submission — the
-   dialog ratio can reset to 9:16 and enhancement can re-tick after a re-render. The
-   project bar being right does not mean the dialog is right.
+   dialog ratio can reset to 9:16, enhancement can re-tick, and the **voiceover field
+   / voice selection can reset** after a re-render. Confirm this clip's voiceover
+   text is in the field and the locked voice is selected before every Generate
+   click. The project bar being right does not mean the dialog is right.
 4. **Concurrency:** submit in scene order, up to the account's visible parallel limit
    (often 5). Full queue = wait for a slot, inspect, submit next. Never duplicate a job.
 5. **Retries:** generate each clip once; retry only a confirmed failure or clearly unusable
    output — **max 3 attempts per clip**, changing one variable per retry. Keep usable clips
    despite minor gaze/camera differences; save deep QA for the final pass.
 6. Public gallery **off** on everything. No music in any clip.
-7. **Duration discipline:** generate each clip at its **beat's narration length**
-   (max 10 s — see §6), and record each finished clip's **measured** duration in the
+7. **Duration discipline:** each clip's duration is set by **its own voiceover**
+   (see §6), and you record each finished clip's **measured** duration in the
    storyboard against its beat. Assumed durations are not evidence — a clip counts
-   only for the seconds it actually runs.
+   only for the seconds it actually runs, and a clip whose voiceover is missing,
+   truncated, in the wrong voice, or does not match its AUDIO line does not count
+   at all: regenerate that clip.
 
-## 8. Narration & sound
+## 8. Narration & sound — voiceover made with each clip
 
-- One narrator: the channel voice, same system voice + settings for every video
-  (record them in the bible). Cloned voice only with the speaker's permission.
-- **Route (field-tested 2026-10-30): Import Media → Text to Speech** (the standalone
-  panel). Do **not** use the generation dialog's "Narration Video" checkbox: it requires
-  a generated start image, caps its text box at **120 characters**, and each Import
-  Speech **replaces** the pending audio (closing the dialog loses it entirely).
-- **Chunking:** the standalone tool's counter reads 2,400 characters, but imports above
-  ~1,100 characters can **fail silently** (2,326 chars → no audio, no error; 699 and
-  1,074 chars succeeded). Split the narration into **≤1,000-character chunks** at
-  sentence boundaries. Rendering takes ~10 s per ~120 characters.
-- **Library assets:** every successful import lands in **Media Library → My Media →
-  My AI Audio**, labelled with the chunk's opening words, each with a
-  `/library/download/<id>` link. Record asset IDs per chunk in script order — the TTS
-  panel row shows only the latest import. The list mixes all past projects: match
-  chunks by their opening-words labels, never by grid position.
-- **Generate narration once and lock it.** Its real length sets the final runtime —
-  the video is cut to the voice, never the reverse. **Measure its duration in seconds
-  as soon as it exists and write it into the storyboard/prompt pack** — it is the
-  coverage target for the §9 underrun gate. Chunks: sum the measured chunk durations;
-  the total is the target.
-- **Clip sound follows the upstream reference method** (realistic-mini-dramas,
-   videoexpress-two-character-agent): every clip is **generated with the production
-   sound described in its prompt** — transient, action-tied ambience and effects, no
-   dialogue, no music — never silent video. At assembly that production sound stays
-   in the mix, **ducked low under the narration** (not hard-muted), so scenes stay
-   alive without competing with the voice.
+- One narrator: the channel voice, same system voice + settings for every clip of
+  every video (currently **Emotion Andrew Multilingual, speed 1, pitch 0** — record
+  them in the bible; any change is an owner decision). Cloned voice only with the
+  speaker's permission.
+- **Route (owner directive, 2026-11-04): the generation dialog's voiceover / audio
+  option, per clip.** In VideoExpress each generation shows a **video prompt** and
+  an **audio / voiceover prompt** for that clip. Put the visual in the video prompt;
+  put that clip's **exact AUDIO line** in the voiceover field; select the locked
+  voice + settings; generate — the clip comes back with its voiceover already on
+  it, at the voiceover's length, in sync by construction. Repeat for every clip.
+- **Never separate again.** No standalone Text-to-Speech generation, no
+  ≤1,000-character chunks, no My AI Audio narration assets, no dragging narration
+  onto a timeline track, no re-aligning voice to picture at assembly. The retired
+  route (2026-10-30 → 2026-11-04) is history, not a fallback: if the voiceover
+  option is missing or fails on a clip, stop and report it — do not fall back to
+  separate narration without the owner's say-so.
+- **Fit the field.** Size each beat to the voiceover field's limit (§6): plan
+  ≤~20 words / ≤120 characters per clip, verify the current limit on the run's
+  first clip, and split any longer line across two beats/shots. Never truncate a
+  line to fit, and never put the narration text inside the video prompt.
+- **Locked means per-clip locked.** Once a clip is accepted, its voiceover is not
+  re-recorded, cut, sped up or swapped. A mispronunciation or wrong read is fixed
+  by **regenerating that one clip** with the respelled word in its voiceover text
+  (screenplay pronunciation list) — never by patching a separate audio track.
+- **Verify voice on every clip** at the segment checkpoint: play the clip — voice
+  present, correct voice, full line, no truncation, picture matches the line. A
+  silent or mismatched clip is a failed clip (max 3 attempts, one variable changed
+  per retry), not an assembly problem to fix later.
+- **Clip sound:** every clip is still **generated with the production sound
+  described in its [PRODUCTION SOUND] block** — transient, action-tied ambience
+  and effects, no dialogue, no music — mixed low under that clip's voiceover,
+  never competing with it.
 - Music: none in generation; one licensed/library track added at assembly, low, ducked
-  under narration, same track family across the channel.
+  under the clips' voiceovers, same track family across the channel.
 
 ## 9. Assembly & the dead-air trim
 
 1. Media Library → My Media → My AI Videos; add clips to the timeline **in planned scene
-   order**, verifying one clip lands before adding the next; no duplicates. Audio assets
-   (narration chunks) are added the same way — **drag-and-drop only**, from My AI Audio;
-   a single click only selects. If a drop lands nowhere, the target track is probably
-   clipped below the viewport: raise the browser viewport height or close the media
-   panel. Never clear a track with its header bin — it deletes the whole track row
+   order**, verifying one clip lands before adding the next; no duplicates. There is
+   **no separate narration track to build** — every clip already carries its own
+   voiceover (§8). If a drop lands nowhere, the target track is probably clipped
+   below the viewport: raise the browser viewport height or close the media panel.
+   Never clear a track with its header bin — it deletes the whole track row
    (reload restores the default two-track layout).
-2. Place narration to start at frame 1 (long-form) — no presenter gap by default. Drag
-   the narration chunks onto the audio track **in script order** (verify each label:
-   the asset's name is its opening words).
+2. The first clip starts at frame 1 (long-form) — its voiceover is the opening line,
+   no presenter gap by default. Clip order **is** narration order: verify the
+   sequence against the screenplay before aligning.
 3. **Auto Align Clips**, then the trim pass: at timeline zoom ~40 px/s, cut and delete
-   every frozen or silent head and tail; close every gap. In Shorts, no shot may outlive
-   its narration line.
-4. If footage overruns the narration's right edge: playhead at the audio edge, select the
-   last video clip, Cut, delete only the excess right-hand chunk. Never stretch, speed or
-   pad the audio to match the picture.
-5. **⛔ BLOCKING underrun gate — check before saving as final and before any export:**
-   sum the measured durations on the video track and compare with the measured
-   narration duration. If video total < narration total − 2 s, **STOP. Do not save as
-   final, do not export, and do not report the video as finished.** Go back to §6/§7,
-   generate the missing coverage as additional clips for the short beats, reassemble,
-   and re-check. A frozen frame, a black tail, a looped clip or a slowed clip is not
-   coverage. (This gate exists because an under-covered export was shipped on
-   2026-10-29 — see §6 coverage math.)
+   every frozen or silent head and tail **that carries no voiceover**; close every
+   gap. Never trim through a spoken line. In Shorts, no shot may outlive its line.
+4. If the assembled total overruns the format's range, cut whole beats (picture +
+   their voiceover together) or re-plan — never stretch, speed, or pad audio, and
+   never cut a clip's voiceover off mid-line.
+5. **⛔ BLOCKING coverage gate — check before saving as final and before any export:**
+   (a) **Count:** every planned beat has its clip, in order, no duplicates;
+   (b) **Voice-per-clip:** every clip's voiceover is present, in the locked voice,
+   complete, and matching its AUDIO line (check at segment checkpoints and again
+   on the assembled timeline — a silent, truncated or wrong-line clip fails the
+   gate); (c) **Runtime:** the summed measured clip durations land in the format's
+   range (long-form ~9–11 min; Short 45–60 s). If any part fails, **STOP. Do not
+   save as final, do not export, and do not report the video as finished.** Go back
+   to §6/§7, generate the missing or failed clips (with their voiceovers),
+   reassemble, and re-check. A frozen frame, a black tail, a looped clip or a
+   slowed clip is not coverage. (This gate replaces the old video-vs-narration
+   totals check: under the per-clip route the two totals are the same number —
+   what can still fail is a missing beat or a clip without its voice.)
 6. Add number/graphic overlays from the research brief (clean text, double-checked against
    sources). Save the project with the naming rule: `LF-YYYYMMDD-topic-slug` /
    `SH-YYYYMMDD-topic-slug`.
@@ -273,10 +297,12 @@ seconds count.**
 
 - Long-form: **High / FullHD 1920×1080 / MP4**. Shorts: **High / FullHD 1080×1920 / MP4**.
 - Verify the export exists in My Videos (a submitted export is not a finished export),
-  then download/archive it the same day. The handoff must state **both** measured
-  totals — total footage seconds and total narration seconds — and confirm the §9
-  underrun gate passed; an export whose duration was set by narration running past
-  the end of the picture is a failed export, not a finished video.
+  then **play the export itself** at the start, middle and end: picture present,
+  voiceover present **on the picture** and matching the scene at each point. Then
+  download/archive it the same day. The handoff must state the measured total
+  runtime, the clip count, and confirm the §9 coverage gate passed (every clip
+  carrying its voiceover); an export with voiceover missing, displaced past the
+  picture, or running over black is a failed export, not a finished video.
 - Hand the user, in one message: download link · 3 title options (pick marked) ·
   description (with sources + disclaimer) · tags · pinned comment · end-screen target ·
   thumbnail brief (3 words max on the thumbnail, one cinematic frame, one emotion) ·
@@ -290,6 +316,6 @@ seconds count.**
 
 The week's long-form is researched once and mined three ways:
 2 Shorts are **cut-downs** (the mechanism in 60 s; the fall in 60 s), re-framed 9:16 from
-the same bible and narration voice — not cropped 16:9 exports. 2 Shorts are **standalone**
+the same bible and the same per-clip voiceover route and locked voice — not cropped 16:9 exports. 2 Shorts are **standalone**
 hooks on next week's topic and end by teasing it. Full method:
 `workflows/repurpose-long-to-shorts.md`.

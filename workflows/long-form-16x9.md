@@ -13,26 +13,31 @@ Rules live in `PLAYBOOK.md`; this is the checklist order of operations.
 4. **Bible** → `templates/character-and-company-bible.md`. Generate + approve the founder
    master image and one master per recurring location. Lock the narrator voice + settings.
 5. **Prompt pack** → `templates/prompt-pack.md` + storyboard (`templates/storyboard-long-form.md`).
-   **Coverage math first (PLAYBOOK §6):** split the script into **narration beats of
-   ≤10 s** (≈ ≤25 words, one idea per beat); each scene is generated at its beat's
-   length — scene count = beat count + ~10% safety B-roll (a 10-min script ≈ 60+ beats,
-   plan ~66; a 7½-min script ≈ 45+, plan ~50). Scene seconds then sum to the narration
-   total by construction. A scene plan whose beats cannot cover the narration is a
-   planning error — fix the count here, not at export. Continuity handoff noted per
-   clip (incoming → action → outgoing → next opening). Reuse 15–20% of scenes as
-   motifs/B-roll to stay inside the week's hours.
-6. **Generate** → image first, then video, in scene order, ≤ account's parallel slots.
-   Settings checked in-dialog every time (ratio 16:9, enhance OFF, gallery OFF).
-   Max 3 attempts per clip. Record each clip's **measured** duration; keep a running total.
-7. **Narrate** → the locked script via Import Media → Text to Speech (≤1,000-char
-   chunks, PLAYBOOK §8); measure each beat's audio and set any not-yet-generated clips
-   to their beat's measured length.
-   Do not re-record for length; the recorded length is the runtime. **Measure it** —
-   that total replaces the step-5 estimate as the coverage target.
-8. **Assemble** → timeline in order, verify each clip, Auto Align, dead-air trim pass,
-   cut overrun at the narration's right edge only. **⛔ Underrun gate (PLAYBOOK §9):**
-   if measured video total < measured narration total − 2 s, STOP — generate the missing
-   coverage and reassemble. No export from an under-covered timeline.
+   **Coverage math first (PLAYBOOK §6):** split the screenplay into **narration beats
+   of ≤10 s**, each sized to the dialog's voiceover field (plan ≤~20 words /
+   ≤120 characters, one idea per beat) — **one beat = one clip = one voiceover line**.
+   Scene count = beat count + ~10% safety B-roll (a 1,400-word script ≈ 70 beats,
+   plan ~77). Each pack entry carries TWO texts: the video prompt (visual only) and
+   the voiceover text (that beat's exact AUDIO line). A scene plan whose beats
+   cannot cover the script is a planning error — fix the count here, not at export.
+   Continuity handoff noted per clip (incoming → action → outgoing → next opening).
+6. **Generate — voiceover WITH each clip** → image first, then in the generation
+   dialog enter the video prompt **and** that clip's voiceover text in the
+   voiceover / audio option, locked channel voice selected, and generate. In scene
+   order, ≤ account's parallel slots. Settings checked in-dialog every time
+   (ratio 16:9, enhance OFF, gallery OFF, **voiceover field filled + voice
+   checked**). Max 3 attempts per clip. **There is no separate narrate step.**
+   Record each clip's **measured** duration; keep a running total; at each segment
+   checkpoint play clips back — voice present, locked voice, full line.
+7. **(No separate narration step — it happened inside step 6.)** If a clip's read is
+   wrong or a name is mispronounced, regenerate **that clip** with the respelled
+   word in its voiceover text. Never generate standalone narration.
+8. **Assemble** → timeline in clip order (= narration order; no separate narration
+   track), verify each clip, Auto Align, dead-air trim pass (never trim through a
+   spoken line). **⛔ Coverage gate (PLAYBOOK §9):** every beat present, every clip
+   carrying its checked voiceover, summed duration in range — if any part fails,
+   STOP, generate the missing/failed clips and reassemble. No export from an
+   under-covered timeline.
 9. **Overlays** → numbers/charts as clean text overlays from the brief (never model-rendered).
 10. **QC** → `templates/qc-checklist.md`, every box. Fix or disclose failures.
 11. **Export** → High / FullHD 1920×1080 MP4, verify in My Videos, download same day.

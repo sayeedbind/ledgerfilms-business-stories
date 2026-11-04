@@ -17,9 +17,12 @@ deliver their own payoff before teasing the long-form.
    top/bottom 15% (UI zones).
 4. **Prompt pack** → 10–14 clips. Same multishot format, same settings discipline:
    ratio **9:16 checked in the dialog**, enhance OFF, gallery OFF, no music.
-5. **Narrate** → same channel narrator, same settings as the long-form. Lock it.
+5. **Generate with voiceover** → each clip is generated with its own line in the
+   dialog's voiceover / audio option, same channel narrator and settings as the
+   long-form. No separate narration step, no separate narration track.
 6. **Assemble & trim** → in order, Auto Align, then the strict trim: *no shot outlives
-   its narration line*. Total must land 45–60 s from the narration, not from cutting audio.
+   its narration line* and never trim through a spoken line. Total must land
+   45–60 s from the summed clip durations, not from cutting audio.
 7. **Captions** → burned-in or platform captions checked line by line — Shorts are watched
    muted; wrong captions = wrong facts. Numbers in captions must match the brief exactly.
 8. **Export** → High / FullHD 1080×1920 MP4, verify, download. Name: `SH-YYYYMMDD-topic-slug`.

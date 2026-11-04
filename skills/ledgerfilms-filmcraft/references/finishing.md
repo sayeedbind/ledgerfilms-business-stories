@@ -10,7 +10,7 @@ The layer between “assembled” and “professional”. Applied after the EDIT
 
 ## 2. Narration performance (direct the voice)
 - The screenplay's AUDIO cells carry performance marks (see screenplay.md): pauses, emphasis, and a **pronunciation list** for names/numbers the TTS is likely to misread — respell inside the spoken text (“Skrip-ting” style) with a plain note outside it; never ship a mispronounced name.
-- One locked voice and settings per channel (currently Emotion Andrew Multilingual, speed 1, pitch 0); any change is an owner decision, recorded in the run sheet. Listen to the full narration once, start to finish, before assembly — a flat or wrong read is fixed at the chunk, not covered by music.
+- One locked voice and settings per channel (currently Emotion Andrew Multilingual, speed 1, pitch 0), selected in the generation dialog for **every clip**; any change is an owner decision, recorded in the run sheet. Listen to the full assembled narration (the clips in order) once, start to finish, before export — a flat or wrong read is fixed by regenerating that clip, not covered by music.
 
 ## 3. Grade & picture finishing
 - **Shot-match the assembled film:** adjacent clips must agree in warmth, contrast and sharpness; the channel grade (muted teal-and-amber, film grain) is the reference frame, and any clip that sits outside it is corrected or regenerated — not averaged away.
