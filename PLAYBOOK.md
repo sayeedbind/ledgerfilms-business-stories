@@ -1,11 +1,11 @@
-# PLAYBOOK — LedgerFilms Business & Money Stories (v1.3)
+# PLAYBOOK — LedgerFilms Business & Money Stories (v1.15)
 
 The full production instructions. `SYSTEM-PROMPT.md` loads this file. When this file and a
 user message disagree, the user wins. When this file and an upstream playbook disagree,
 this file wins — it is the LedgerFilms adaptation.
 
 **Channel:** LedgerFilmsHQ  
-**v1.14 change (2026-11-04, owner restated):** the **DURATION RULE** is now named and blocking — **video duration depends on voiceover runtime**: a clip's length is its voiceover's actual runtime, and the video's runtime is the sum of its clips' voiceovers. Never preset a narrated clip's length, never trim/speed a voiceover to fit a preset length, and derive any timed shot segments from the line's words (§§6–7). · **v1.13 change (2026-11-04, owner directive):** **voiceover is made WITH each clip** — every clip is generated from two fields in the VideoExpress generation dialog: the **video prompt** (the visual) and the **voiceover / audio prompt** (that clip's exact narration line, in the dialog's voiceover option, with the one locked channel voice). There is **no separate narration generation, no standalone Text-to-Speech chunks, and no separate narration track** (§§6–9). Clip length follows its voiceover playtime automatically. · **v1.7 change (2026-10-31):** **scene length follows the voiceover** — narration is split into ≤10 s beats and each clip is generated at its beat's measured duration (a 5 s line = a 5 s scene); scene count = beat count + ~10% B-roll (§6). · **v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
+**v1.15 change (2026-11-11, sync of the studio repo's v1.2.0 bundle):** the **CONTEXT STANDARD** is now channel law (§§3–4 + filmcraft `references/context-standard.md` + a blocking **Context gate**): literal referents, mechanism diagrams, system-map opener, tour-guide narration, viewer's-life bookends — written after the owner rated the finished AI Sell-Off long-form 5/10, “still lack of context”, against the FactZaara oil-tanker benchmark. The **SINGLE-VOICE RULE** is named (§8): the video prompt is visuals-only and **Video Only (No Sound) stays OFF**, after a Short shipped with doubled narration. The **600-SECOND EXPORT CAP** + the full verify-the-export law land in §10 (head-frame sample on every clip, contact-sheet uniqueness scan, tail listen). Filmcraft also gains the 2026-11-07 data & context discipline and figure rule, and the proven locked-voice respellings (2026-11-11). Creative mode OFF, the per-clip voiceover route (v1.13) and the DURATION RULE (v1.14) are unchanged and re-affirmed. · **v1.14 change (2026-11-04, owner restated):** the **DURATION RULE** is now named and blocking — **video duration depends on voiceover runtime**: a clip's length is its voiceover's actual runtime, and the video's runtime is the sum of its clips' voiceovers. Never preset a narrated clip's length, never trim/speed a voiceover to fit a preset length, and derive any timed shot segments from the line's words (§§6–7). · **v1.13 change (2026-11-04, owner directive):** **voiceover is made WITH each clip** — every clip is generated from two fields in the VideoExpress generation dialog: the **video prompt** (the visual) and the **voiceover / audio prompt** (that clip's exact narration line, in the dialog's voiceover option, with the one locked channel voice). There is **no separate narration generation, no standalone Text-to-Speech chunks, and no separate narration track** (§§6–9). Clip length follows its voiceover playtime automatically. · **v1.7 change (2026-10-31):** **scene length follows the voiceover** — narration is split into ≤10 s beats and each clip is generated at its beat's measured duration (a 5 s line = a 5 s scene); scene count = beat count + ~10% B-roll (§6). · **v1.6 changes (2026-10-30):** trending topics are presented as a **top-5 rated slate and the user chooses one before production** (§1A) · clip duration supports the **full 10 s** the dialog allows — plan scenes to use it (§6) · **sound follows the upstream reference repos**: clips are generated WITH their described production sound and ducked under the narration, never silent video (§8). · AI-Illustrated Business & Money Stories
 **Formats:** Long-form ~10:00, 16:9 · Shorts 45–60 s, 9:16 · Nothing else. Never 1:1.
 **Look:** cinematic AI art (photoreal-cinematic), faceless, narration-led.
 
@@ -82,6 +82,14 @@ Character here means *protagonist*: a founder, a company, or an idea. Give the p
 one clear desire and one clear blind spot. That — not dialogue — is what carries a
 documentary.
 
+**Context structure (the Context Standard — full text in filmcraft
+`references/context-standard.md`):** the spine is **one thing travelling through one
+system** (a dollar, a megawatt, a vote, a chip, a loan). Open with a **system map** — a
+single shot or diagram showing every place the story will visit and how they connect —
+and return to it at chapter turns. Bookend the film on the **viewer's own daily life**:
+the hook starts from something they touch daily (their bill, their app, their rent, the
+price at the till) and the lesson returns to exactly that spot.
+
 ## 4. Scripts
 
 ### Long-form (~10 min)
@@ -92,6 +100,18 @@ documentary.
 - Chapters follow the spine in §3. End on the lesson + one line that sets up a related
   video (end-screen), never "like and subscribe" in the narration.
 - Use `templates/script-long-form.md`.
+- **Context rules (the Context Standard — a finished film was rated 5/10 for breaking
+  these; they bind Shorts too):** every noun the narration names appears on screen **as
+  itself** in the same beat — a symbol or mood shot may accompany a fact, never carry it.
+  **One fact per line**; a line packing three facts becomes three lines and three shots.
+  Write as a **tour guide**, not an essayist: "this…", "here…", signposted chapter turns,
+  questions the next shot answers. Every **invisible mechanism** (inside a market, a
+  machine, a law, the ground) gets a planned **diagram beat** — cross-section, cutaway or
+  flow diagram with the process moving inside it; a figure overlay is not a mechanism.
+  Every abstract mechanism gets an **everyday analogy**. Show the **humans** — faces,
+  routines, danger — don't just state them. The screenplay must pass the filmcraft
+  **Context gate** (muted, any 5 lines: WHAT / WHERE in the system / HOW does it work)
+  before generation.
 
 ### Shorts (45–60 s)
 - **115–150 words.** One fact, one mechanism, one reveal. Nothing else.
@@ -252,12 +272,23 @@ seconds count.**
   ≤~20 words / ≤120 characters per clip, verify the current limit on the run's
   first clip, and split any longer line across two beats/shots. Never truncate a
   line to fit, and never put the narration text inside the video prompt.
+- **THE SINGLE-VOICE RULE (corrected by the owner, 2026-11-07 — a Short's first
+  version shipped with every line said twice):** the video prompt describes
+  **visuals only** — never the narration line, never quoted speech, never
+  "narrator says" — because the video model voices any line it is given, and the
+  clip's voiceover then says it a second time (doubled narration). The
+  visuals-only prompt is the kill switch. **"Video Only (No Sound)" stays OFF**
+  on narrated clips: ticking it kills ALL audio, including the voiceover (proven
+  on the repair run — a clip generated with it ticked came back silent).
 - **Locked means per-clip locked.** Once a clip is accepted, its voiceover is not
   re-recorded, cut, sped up or swapped. A mispronunciation or wrong read is fixed
   by **regenerating that one clip** with the respelled word in its voiceover text
   (screenplay pronunciation list) — never by patching a separate audio track.
 - **Verify voice on every clip** at the segment checkpoint: play the clip — voice
-  present, correct voice, full line, no truncation, picture matches the line. A
+  present, correct voice, full line, no truncation, picture matches the line —
+  and **listen to the clip's tail** for a doubled final word or a second voice
+  starting under the first (the doubled-narration defect passes a
+  words-present-and-in-order check; only the tail listen catches it). A
   silent or mismatched clip is a failed clip (max 3 attempts, one variable changed
   per retry), not an assembly problem to fix later.
 - **Clip sound:** every clip is still **generated with the production sound
@@ -304,10 +335,25 @@ seconds count.**
 
 ## 10. Export & handoff
 
+- **⛔ THE 600-SECOND EXPORT CAP (learned 2026-11-08, cost the AI Sell-Off film its
+  closing line):** VideoExpress exports are hard-capped at **600 s** — the dialog
+  warns "The duration of your project exceeds the allowed duration (10 minutes).
+  Your movie will be reduced." and the render cuts at exactly 600.00 s, **silently
+  dropping the end**. Any project over 600 s must be trimmed to ≤600 s before
+  export, or exported in parts and spliced locally (the AI Sell-Off fix: clip 119
+  spliced back at the measured boundary in the local finishing pass). Whichever
+  route: verify the closing line is present in the exported file itself.
 - Long-form: **High / FullHD 1920×1080 / MP4**. Shorts: **High / FullHD 1080×1920 / MP4**.
 - Verify the export exists in My Videos (a submitted export is not a finished export),
   then **play the export itself** at the start, middle and end: picture present,
-  voiceover present **on the picture** and matching the scene at each point. Then
+  voiceover present **on the picture** and matching the scene at each point.
+  Existence and file size are not verification. The full verify-the-export law:
+  sample a frame from the **head of every clip** (a clip once opened on ~2.5 s of
+  black in the raw export and every segment check missed it — head frames are
+  sampled, never assumed), scan a **contact sheet for repeated visuals** across
+  clips (the CVS Short was rejected for the same clips/images in at least 3 clips
+  after a sync-only check passed it), and **listen to each clip's tail** for
+  doubled audio (§8). Then
   download/archive it the same day. The handoff must state the measured total
   runtime, the clip count, and confirm the §9 coverage gate passed (every clip
   carrying its voiceover); an export with voiceover missing, displaced past the

@@ -1,5 +1,68 @@
 # Changelog
 
+## v1.15 — 2026-11-11
+- **Sync of the studio repo's v1.2.0 bundle (owner order, 2026-11-11).** The
+  public prompt package (`ledger-films-studio` v1.2.0, commit ece851b) received
+  these updates on 2026-11-11; this release brings the same bundle into the
+  internal full system, so the two repos no longer diverge on them.
+- **The CONTEXT STANDARD is now channel law.** New filmcraft reference
+  `skills/ledgerfilms-filmcraft/references/context-standard.md` (the working
+  copy, verbatim) + a blocking **Context gate** in the filmcraft SKILL (muted,
+  any 5 lines: WHAT / WHERE in the system / HOW does it work), context structure
+  and context rules in PLAYBOOK §§3–4, the gate in SYSTEM_PROMPT /
+  SYSTEM-PROMPT / README Step 1A, PROMPT_COMPACT, the business-stories skill's
+  always-on rules, the QC checklist and fact-check-qc, and a troubleshooting
+  row. Source: the owner rated the finished AI Sell-Off long-form **5/10 —
+  “still lack of context”** (2026-11-09) against his benchmark, FactZaara's
+  “How Crude Oil Travels From the Ocean Floor to a Giant Tanker Ship” (17M
+  views; ~150-shot analysis): the gap was not pace (5.1 s/clip vs 5.6 s/shot)
+  but literal referents, hidden mechanisms shown as diagrams, a system-map
+  opener, tour-guide narration (one fact per line, signposts, everyday
+  analogies), human anchors shown, and viewer's-life bookends. Symbolic
+  tableaux + figure overlays are a patch over context, not context.
+- **THE SINGLE-VOICE RULE, named (owner correction, 2026-11-07).** The AI
+  Sell-Off Short v1 shipped with **doubled narration** — the video model voiced
+  the line pasted into the video prompt under the clip's voiceover. Rule: the
+  video prompt is **visuals-only** (no narration line, no quoted speech, no
+  “narrator says”); **“Video Only (No Sound)” stays OFF** (ticking it killed
+  ALL audio including the voiceover on the repair run — the visuals-only
+  prompt is the kill switch); a **tail listen** on every clip is now part of
+  voice verification, because doubling passes a words-present-and-in-order
+  check. Written into PLAYBOOK §8, narration-and-sound, the UI map,
+  PROMPT_COMPACT, the SYSTEM_PROMPT/README fallback essentials, the
+  business-stories skill, fact-check-qc, the QC checklist and troubleshooting.
+- **THE 600-SECOND EXPORT CAP + the verify-the-export law (learned
+  2026-11-08).** VideoExpress exports cut at exactly 600.00 s and silently
+  drop the end — the AI Sell-Off long-form lost its closing line and was
+  finished by splicing clip 119 back at the measured boundary. Rule: trim to
+  ≤600 s before export or export in parts and splice; **verify the exported
+  file itself** — play start/middle/end (picture, narration, sync, closing
+  line present), **head-frame sample on every clip** (clip 38 once opened on
+  ~2.5 s of black and segment checks missed it), **contact-sheet scan** for
+  repeated visuals (the CVS Short was rejected for repeated clips/images
+  after a sync-only check passed it), tail listen per clip. Existence and
+  file size are not verification. Written into PLAYBOOK §10, the UI map,
+  both workflows, fact-check-qc, the QC checklist, troubleshooting and the
+  SYSTEM_PROMPT/README fallback essentials.
+- **Filmcraft catches up with the working copy (2026-11-07 + 2026-11-11
+  corrections that had only landed in the owner's custom skills):**
+  cinematography gains the **Data & context discipline** section (motif
+  ration ~⅓, human-scale ground within any 3 clips, ≥4 camera behaviours /
+  ≥3 angles per 10 shots, data lines shot as graphics); motion-graphics gains
+  **the figure rule** (every load-bearing figure gets a planned GRAPHIC beat;
+  garbled digits = shapes-only in-clip + timed editor overlay); screenplay's
+  pronunciation list gains the **proven locked-voice respellings** from
+  SH-20261111-nvidia-alone — “Nvidia” → **“Nuhvidia”**, “US” → **“U. S.”**,
+  “Huang” unpronounceable in five spellings (reword the line to drop the
+  name); filmcraft step 3 now carries the DURATION RULE parenthetical. The
+  repo filmcraft tree is byte-identical to the working copy except its
+  repo-relative stack path. The production-stack skill's filmcraft reference
+  list now includes context-standard.
+- **Re-affirmed, unchanged:** Creative mode **OFF** everywhere (already
+  correct in this repo — verified by sweep), the per-clip voiceover route
+  (v1.13), the DURATION RULE (v1.14), proof segment 60–90 s. PLAYBOOK title
+  tag (stale at v1.3) corrected. Prompt v1.15.
+
 ## v1.14 — 2026-11-04
 - **The DURATION RULE, named and blocking (owner restated: “Mind it — video
   duration depends on voiceover runtime”).** It was implicit in v1.13; now it is

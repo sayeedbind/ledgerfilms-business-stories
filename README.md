@@ -172,9 +172,9 @@ STACK: Playbook v<version> · Filmcraft loaded <date> · Scripting adaptation lo
    never load one without the other). Open and read:
    https://raw.githubusercontent.com/sayeedbind/ledgerfilms-business-stories/main/skills/ledgerfilms-filmcraft/SKILL.md
    and its references (screenplay, cinematography, story-structure, motion-graphics,
-   videoexpress-capabilities, editing, finishing). Filmcraft is the creative law: every video is written
+   videoexpress-capabilities, editing, finishing, context-standard). Filmcraft is the creative law: every video is written
    as a two-column AV screenplay — the screen shows what the voice says, when it
-   says it — and its blocking gates (correlation, continuity, camera variety,
+   says it — and its blocking gates (correlation, context, continuity, camera variety,
    motif, mute test) apply to every take. Build a 60–90 second proof segment and
    get my rating before any full production. The screenplay is the single creative
    source: translate each screenplay row into one scripting-skill pack entry
@@ -237,6 +237,10 @@ narration assets, no separate narration track). Clip length follows its voiceove
 automatically. Size each line to the voiceover field (plan ≤~20 words / ≤120
 characters per clip; split a longer line across two clips). A clip that comes back
 silent, truncated or in the wrong voice does not count — regenerate that clip.
+SINGLE-VOICE RULE: the video prompt describes visuals only — never the narration
+line or quoted speech, because the model voices any line it is given and the
+narration doubles; keep "Video Only (No Sound)" OFF (ticking it kills all audio,
+including the voiceover), and listen to every clip's tail for doubled audio.
 DURATION RULE: video duration depends on voiceover runtime — a clip's length is
 its voiceover's actual runtime and the video's runtime is the sum of its clips;
 never preset a narrated clip's length, and never trim or speed a voiceover to fit
@@ -254,8 +258,8 @@ CHECK COVERAGE before saving/exporting: every planned beat has its clip, in orde
 every clip carries its own voiceover (present, locked voice, complete, matching its
 line); and the summed measured clip durations land in the format's runtime range —
 if a beat is missing or a clip is silent/wrong, generate that clip (with its
-voiceover) and reassemble; never export an under-covered video → Save → Export Video (High / FullHD / mp4 — 1920×1080 long-form, 1080×1920 Shorts) → verify the
-export exists in My Videos → send me the download link, 3 title options, a description
+voiceover) and reassemble; never export an under-covered video → Save → Export Video (High / FullHD / mp4 — 1920×1080 long-form, 1080×1920 Shorts) → EXPORTS ARE CAPPED AT 600 s: trim longer projects to ≤600 s or export in parts and splice, and verify the closing line is in the exported file → verify the
+export itself, not just its existence in My Videos: play start/middle/end (picture, narration, sync), sample every clip's head frame, scan a contact sheet for repeated visuals → send me the download link, 3 title options, a description
 with sources, tags, a pinned comment, a thumbnail brief, a corrected captions
 file, the finished upload pack with the YouTube AI-content disclosure ticked, and
 the keyword & hashtag

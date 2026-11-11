@@ -14,7 +14,13 @@ Edit ☐ order/no dupes · ☐ Auto Align · ☐ dead-air trim at 1× (never thr
 ☐ **COVERAGE GATE: every planned beat has its clip · every clip carries its checked
 voiceover · summed measured total ___ s in format range
 (no black/frozen/looped tail — if this fails, STOP, no export; PLAYBOOK §9)**
-Export ☐ verified in My Videos · ☐ FullHD, correct ratio · ☐ downloaded/archived
+Export ☐ verified in My Videos · ☐ FullHD, correct ratio · ☐ downloaded/archived ·
+☐ project ≤600 s or exported in parts + spliced (600 s export cap) · ☐ export itself
+played start/middle/end (picture + narration + sync + closing line present) ·
+☐ head frame sampled on every clip · ☐ contact sheet scanned — no repeated visuals ·
+☐ every clip's tail listened to — no doubled audio · ☐ single voice per clip
+(visuals-only video prompts; Video Only (No Sound) OFF) · ☐ Context gate passed
+(5 lines muted: WHAT / WHERE in the system / HOW does it work)
 Pack ☐ titles · ☐ description+sources+disclaimer · ☐ pinned comment · ☐ thumbnail brief
 
 **Failed items + what was done:**

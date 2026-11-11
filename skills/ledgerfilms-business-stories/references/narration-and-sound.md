@@ -17,11 +17,19 @@
   current voiceover-field limit on the run's first clip and never exceed the smaller of
   (that limit, ~25 words / 10 s spoken). Split a longer line across two beats/shots.
   Never truncate a line, and never paste narration text into the video prompt.
+- **The single-voice rule (owner correction, 2026-11-07).** The video prompt is
+  **visuals only** — no narration line, no quoted speech, no "narrator says" —
+  because the video model voices any line it is given, and the clip's voiceover
+  then repeats it: doubled narration (a Short's v1 shipped exactly this defect).
+  The visuals-only prompt is the kill switch. **"Video Only (No Sound)" stays
+  OFF** — ticking it killed ALL audio including the voiceover on the repair run.
 - **Locked means per-clip locked.** An accepted clip's voiceover is never re-recorded,
   cut, speed-changed or swapped. A mispronunciation is fixed by regenerating **that
   clip** with the respelled word in its voiceover text (screenplay pronunciation list).
 - **Verify every clip's voice** at the segment checkpoint: present, locked voice, full
-  line, matching its AUDIO cell. Silent / truncated / wrong-voice = failed clip,
+  line, matching its AUDIO cell — and **listen to the tail** of each clip for a
+  doubled final word (doubling passes a words-in-order check; only the tail
+  listen catches it). Silent / truncated / wrong-voice = failed clip,
   regenerate (max 3 attempts, one variable per retry).
 - **Voices and permission:** system voices by default. A cloned voice only with the
   speaker's documented permission for this use.

@@ -29,5 +29,11 @@ One motivated source per scene (window, desk lamp, screen glow), direction kept 
 ## Prompt formula
 `[Character/object block, verbatim from the Bible] + [ONE specific action, present tense] + [shot size] + [angle] + [ONE movement] + [location block] + [light] + cinematic photorealistic AI illustration, dramatic motivated light, muted teal-and-amber grade, shallow depth, film grain, no text, no watermark`
 
+## Data & context discipline (OWNER CORRECTION 2026-11-07 — AI Sell-Off proof rated 6/10: “cinematography needs to be improved, for data better infographics and context required”)
+- **Motif ration:** the film's motif shot (here: red line on dark glass) may carry at most ~⅓ of any sequence. A proof where half the shots are the same glass-and-line composition reads as one location, however good each frame is.
+- **Ground every abstraction:** within any 3 consecutive clips, at least one shot is human-scale context — a person, a workplace, a town — showing the world the number is about. Data floating over abstract art with no ground under it is a gate failure.
+- **Variety is enforced, not hoped for:** across any 10 shots use ≥4 camera behaviours AND ≥3 angles (eye-level alone does not count as variety); crane, low-angle power, high-angle vulnerability, OTS discovery and top-down systems shots exist to be used where the line earns them. If the contact sheet looks like one room, the cinematography failed even if correlation passed.
+- **Data lines are shot as graphics, not B-roll:** a line carrying a load-bearing figure is planned as a GRAPHIC beat (see motion-graphics.md) — build, diagram, map or document push — with the location/character context in the same sequence.
+
 ## Continuity mechanics
 Repeat the full character and location blocks in every prompt (AI generators have no memory). Same seed/reference route whenever the tool offers one; regenerate any shot whose wardrobe, prop or geography drifts. Screen direction: a character travelling left→right keeps travelling left→right across cuts; doors open the same way every time.

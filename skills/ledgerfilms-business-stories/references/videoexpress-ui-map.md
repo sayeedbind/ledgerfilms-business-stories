@@ -16,6 +16,11 @@ UI — if a label differs, follow the PLAYBOOK's intent and note the change in t
   Plan lines at ≤~20 words / ≤120 characters (the voiceover field is short; verify
   its current limit on the first clip of a run). **Never** use the standalone
   Import Media → Text to Speech panel for narration — that route is retired.
+- **Single-voice rule (2026-11-07):** the **video prompt describes visuals only** —
+  never paste the narration line, quoted speech or "narrator says" into it; the
+  model voices any line it is given and the voiceover then says it a second time
+  (doubled narration). **Video Only (No Sound) stays OFF** on narrated clips —
+  ticking it kills *all* audio, including the voiceover.
 - **The dialog trap:** before EVERY submission, check the settings *inside the generation
   dialog* — its ratio selector can reset to 9:16, prompt-enhancement can re-tick,
   and the **voiceover field / voice selection can reset** after a re-render,
@@ -37,6 +42,9 @@ UI — if a label differs, follow the PLAYBOOK's intent and note the change in t
 - **Trim:** timeline zoom ~40 px/s; Cut + Delete for frozen/silent heads and tails;
   **Auto Align Clips** to close gaps.
 - **Export:** High quality / FullHD / MP4 — 1920×1080 (16:9) or 1080×1920 (9:16).
+  **Exports are hard-capped at 600 s:** the dialog warns "your movie will be
+  reduced" and the render cuts at exactly 600.00 s, silently dropping the end —
+  trim longer projects to ≤600 s or export in parts and splice (PLAYBOOK §10).
   Exports live in **My Videos** (upstream notes a 40-day window) — download same day.
 - **Always:** public gallery / sharing OFF, "Automatically enhance my video prompt" OFF,
   no music generated into clips.

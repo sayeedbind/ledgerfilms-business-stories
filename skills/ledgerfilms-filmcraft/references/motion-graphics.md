@@ -10,6 +10,9 @@ Graphics exist to make un-filmable information visible at the exact moment the n
 5. **Lower-third identification** — name + role + source the first time a person/company/statistic appears (“Steve Huffman, CEO — earnings call, 29 Oct 2026”), which is also the channel's attribution discipline made visible.
 6. **Kinetic emphasis** — one short phrase (≤4 words) set large at the turn and the lesson only (“THE DOOR CLOSED”).
 
+## The figure rule (OWNER CORRECTION 2026-11-07 — proof rated 6/10, “for data better infographics”)
+Every load-bearing figure in the narration — a money amount, a percentage, a count, a date — gets a **planned GRAPHIC beat in the screenplay's VISUAL column** at the clip where it is spoken: a figure/bar/line build, a mechanism diagram, a map light-up, a timeline advance, or a document push. A big number spoken over abstract art does not count as showing the data. Where the video model cannot render digits cleanly (garbling), the build is shapes-only in the generated clip and the exact figure + source is set as a timed editor overlay in the channel style (amber on deep teal/charcoal) at the clause that names it. The screenplay lists each planned overlay (text, source, clip, timing) so the editor step is execution, not improvisation.
+
 ## Craft rules
 - **One graphic idea per shot**, entered cleanly (fade/build ≤0.5s), held long enough to read (≥ the time to read it aloud), exited cleanly. No bouncing, spinning or zooming text — VideoExpress's Fast Cut Zoom stays OFF; graphics move by build and reveal, not by effects.
 - **Style lock:** same type family, weight, colour (amber on deep teal/charcoal), position grid and easing for every graphic in every video — the channel's visual signature.

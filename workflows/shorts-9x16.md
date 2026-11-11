@@ -26,5 +26,7 @@ deliver their own payoff before teasing the long-form.
 7. **Captions** → burned-in or platform captions checked line by line — Shorts are watched
    muted; wrong captions = wrong facts. Numbers in captions must match the brief exactly.
 8. **Export** → High / FullHD 1080×1920 MP4, verify, download. Name: `SH-YYYYMMDD-topic-slug`.
+   Verify the exported file itself: full play-through (picture + single voice, in
+   sync), head frames lit on every clip, no visual repeated across clips.
 9. **Publish pack** → hook as the title, `#shorts`, pinned comment linking the related
    long-form (or teasing next week's), post 6–9 PM ET on its scheduled day.

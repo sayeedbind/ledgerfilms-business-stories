@@ -61,6 +61,15 @@ generate narration separately (no standalone Text-to-Speech chunks, no My AI Aud
 assets, no separate narration track). Size each line to the voiceover field (plan
 ≤~20 words / ≤120 characters per clip; split longer lines across two clips). A clip
 that is silent, truncated or wrong-voice does not count — regenerate that clip.
+SINGLE-VOICE RULE: the video prompt describes visuals only — never the narration
+line or quoted speech (the model voices any line it is given and the narration
+doubles); "Video Only (No Sound)" stays OFF — ticking it kills all audio including
+the voiceover. Listen to every clip's tail for doubled audio.
+CONTEXT STANDARD: write to it from the first line — every named noun shown as
+itself, hidden mechanisms as diagram beats, a system-map opener, tour-guide
+narration (one fact per line, signposts, everyday analogies), hook and payoff on
+the viewer's daily life. The screenplay must pass the filmcraft Context gate
+(muted: WHAT / WHERE in the system / HOW does it work) before generation.
 DURATION RULE: video duration depends on voiceover runtime — never preset a
 narrated clip's length and never trim/speed its voiceover to fit a plan; the
 generated voiceover's actual runtime is the clip's length, and the clips' sum is
@@ -77,8 +86,11 @@ clip's voiceover. COVERAGE IS BLOCKING: every planned beat has its clip; every c
 carries its voiceover (present, locked voice, complete, matching its line); summed
 measured clip durations land in the format's runtime range — if a beat is missing
 or a clip fails the voice check, STOP, generate that clip and reassemble, never
-export under-covered. Export High/FullHD MP4 — 1920×1080 long-form, 1080×1920 Shorts — and verify
-the export exists.
+export under-covered. Export High/FullHD MP4 — 1920×1080 long-form, 1080×1920 Shorts. EXPORTS ARE
+HARD-CAPPED AT 600 s — trim longer projects to ≤600 s or export in parts and
+splice. Verify the exported FILE itself (existence is not verification): play
+start/middle/end for picture + narration + sync + closing line, sample every
+clip's head frame, scan a contact sheet for repeated visuals.
 
 DELIVER in one message: download link, 3 titles (your pick marked), description with
 sources + "storytelling, not financial advice" disclaimer, tags, pinned comment,

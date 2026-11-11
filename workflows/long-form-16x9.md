@@ -41,7 +41,10 @@ Rules live in `PLAYBOOK.md`; this is the checklist order of operations.
 9. **Overlays** → numbers/charts as clean text overlays from the brief (never model-rendered).
 10. **QC** → `templates/qc-checklist.md`, every box. Fix or disclose failures.
 11. **Export** → High / FullHD 1920×1080 MP4, verify in My Videos, download same day.
-    Project name: `LF-YYYYMMDD-topic-slug`.
+    Project name: `LF-YYYYMMDD-topic-slug`. **Exports cap at 600 s** — if the summed
+    runtime exceeds it, trim to ≤600 s or export in parts and splice (PLAYBOOK §10);
+    then play the exported file itself (start/middle/end + closing line), sample
+    every clip's head frame and scan the contact sheet before calling it done.
 12. **Upload pack** → `templates/upload-metadata.md` + `templates/thumbnail-brief.md`:
     3 titles (pick marked), description with sources + disclaimer, chapters, tags,
     pinned comment, end-screen = the related video the last narration line sets up.
