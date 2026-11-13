@@ -1,5 +1,51 @@
 # Changelog
 
+## v1.16 — 2026-11-13
+- **New skill: LedgerFilms Thumbnails (`skills/ledgerfilms-thumbnails/`) — the
+  thumbnail generator the system was missing (owner directive, 2026-11-13).**
+  Until now the repo carried thumbnail *rules* only (brief template,
+  titles/thumbnails doc, the finishing packaging triangle); finished thumbnails
+  were improvised locally per film. The owner designated **Artistly**
+  (app.artistly.ai, same provider as VideoExpress; “Artistly Unlimited
+  (Full Pay)” account, login in the Secure Vault) as the production tool.
+- **Route, verified live before write-down:** the **Advanced AI Image Designer**
+  (canvas editor) is the production route — the only place an exact canvas size
+  exists (custom Width × Height: **1280×720** long-form, **1080×1920** Shorts
+  covers). The headline **Thumbnail Agent is rejected as the route** (YouTube
+  URL + quantity only — no prompt, style, size or text control; useless for an
+  unpublished video), and the Fast designer's ratios are near-misses (16:9 =
+  1344×768). Workflow: brief first (≤3 words, figure checked like any claim,
+  title/thumbnail never repeat) → base frame from the **raw** export (before
+  burned captions) → exact-size project → frame full-canvas → editor treatments
+  (upscaler, object remover, background *replace* — no true remover) → channel
+  text (bold, figure in amber **#FFB000** hex, impact word white; heavy face) →
+  save + PNG export → **download same day** (Personal Designs retained 1 year)
+  → file PNG + **JPG copy** in the goal's `files/`; **two variants** (A = the
+  film's own frame, B = concept/generated) for the owner to pick at upload.
+- **The proof run (2026-11-13, SH-20261111-nvidia-alone):** 3 variants built in
+  the editor and verified on the downloaded files — dimensions, ≤2 MB, the 10%
+  zoom test. B (the film's red-plunge frame) is clean and filed ready. Lessons
+  written into the skill as blocking rules: **text ≤85% of canvas width** (A
+  and C stretched edge-to-edge and clipped letters), a **PNG can exceed
+  YouTube's 2 MB limit** (A: 2.19 MB — the JPG copy is the upload file), and
+  placing an AI generation **auto-resizes the canvas** (C landed at 768×1344 —
+  resize back via Settings and re-check margins). **No watermark** on generated
+  output (checked full-frame + zoomed corner).
+- **Editor quirks documented** in `references/artistly-ui-map.md` and the skill:
+  Width/Height fields overwrite each other (Height first, verify before
+  Create), the Images-panel Upload may expose no file input (Custom Character
+  panel input is the fallback), text-box Duplicate is unreliable (fresh heading
+  per line), side-handle drags stretch glyphs, no text outline/shadow control
+  (legibility comes from frame choice or a dark Shape behind the text), stale
+  font-size readouts, ~20–30 s Create/Save latency (~10–15 min per finished
+  thumbnail once the route is known).
+- **Wiring:** business-stories SKILL router gains a Thumbnails row; the
+  thumbnail-brief template names the skill as its execution step; PLAYBOOK §10's
+  handoff now requires two finished variants filed with the pack; filmcraft
+  finishing's packaging-triangle note points at the skill. Prompt v1.16. The
+  skill also lives as a working custom skill in the owner's Muse environment;
+  the studio repo (public package) is not touched by this release.
+
 ## v1.15 — 2026-11-11
 - **Sync of the studio repo's v1.2.0 bundle (owner order, 2026-11-11).** The
   public prompt package (`ledger-films-studio` v1.2.0, commit ece851b) received

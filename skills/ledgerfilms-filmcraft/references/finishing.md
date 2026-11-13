@@ -19,7 +19,7 @@ The layer between “assembled” and “professional”. Applied after the EDIT
 ## 4. Captions, chapters, packaging
 - **Long-form:** a corrected SRT caption file is part of the upload pack (auto-captions reviewed, names/numbers fixed — captions are a ranking and accessibility asset, not an afterthought). **Shorts:** burned-in captions, channel style, ≤2 lines.
 - **Chapters** at the story beats (hook / mechanism / turn / lesson) with viewer-language titles.
-- **Packaging triangle:** title, thumbnail and the first 30 seconds must promise the same thing in the same words as the topic question; the thumbnail brief (templates/thumbnail-brief.md) is checked against the finished cold open, not the planned one.
+- **Packaging triangle:** title, thumbnail and the first 30 seconds must promise the same thing in the same words as the topic question; the thumbnail brief (templates/thumbnail-brief.md) is checked against the finished cold open, not the planned one. The brief is executed in Artistly per `skills/ledgerfilms-thumbnails/SKILL.md` (two verified variants filed with the upload pack).
 
 ## 5. Compliance at upload (blocking)
 - **YouTube AI disclosure:** tick the altered/synthetic content disclosure for realistic AI-generated scenes at upload — every LedgerFilms video, every time; record the tick in the upload pack.

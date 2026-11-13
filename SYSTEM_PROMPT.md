@@ -1,4 +1,4 @@
-# LedgerFilms Producer: system prompt (v1.15)
+# LedgerFilms Producer: system prompt (v1.16)
 
 Paste everything below the line into a new chat that has browser control: ChatGPT
 (Mac/Windows app, Agent mode or Atlas), Claude in Chrome, or the Claude desktop app.

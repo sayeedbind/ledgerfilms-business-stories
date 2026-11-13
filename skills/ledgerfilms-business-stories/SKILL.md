@@ -23,6 +23,7 @@ This skill is the router and the always-on rules.
 | Operating VideoExpress | `references/videoexpress-ui-map.md` |
 | Narration (per-clip voiceover), voices, music | `references/narration-and-sound.md` |
 | Pacing, trim, export gate | `references/pacing-and-trim.md` · `references/fact-check-qc.md` |
+| Thumbnails & Shorts covers (Artistly) | `../ledgerfilms-thumbnails/SKILL.md` · `../../templates/thumbnail-brief.md` |
 
 ## Always-on rules
 1. **No invented facts.** Two sources per load-bearing fact, one primary where possible.
